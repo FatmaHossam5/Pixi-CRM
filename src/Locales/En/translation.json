@@ -1,0 +1,534 @@
+{
+    "sign_in": "sign in",
+    "please_sign_in": "Please sign in with your account",
+    "username_placeholder": "User name",
+    "password_placeholder": "Password",
+    "remember_me": "Remember me",
+    "forgot_password": "Forget your password?",
+    "field_required": "Field is required",
+    "sign_in_button": "Sign in",
+    "accessDenied": "Access Denied",
+    "loginFaild": "Data That Enter Not Correct",
+    "welcomeTo": "Welcome to, {{hotel}}",
+    "search": "Search",
+    "notifications": "Notifications",
+    "forms": "Forms",
+    "exports": "Exports",
+    "backupRestore": "Back up & Restore",
+    "reports": "Report",
+    "settings": "Settings",
+    "aboutApp": "About the App",
+    "logout": "Log out",
+    "userPhoto": "User Photo",
+    "poweredBy": "Powered by",
+    "dashboard": "Dashboard",
+    "reservations": "Reservations",
+    "singleRequests": "Single Requests",
+    "groupRequests": "Group Requests",
+    "addonRequests": "Addons Requests",
+    "rooms": "Rooms",
+    "calendar": "Calendar",
+    "customers": "Customers",
+    "blackList": "Black List",
+    "inventory": "Inventory",
+    "allProducts": "All Products",
+    "vendor": "Vendor",
+    "housekeeping": "Housekeeping",
+    "maintenance": "Maintenance",
+    "invoices": "Invoices",
+    "nightAuditor": "Night Auditor",
+    "generalSettings": "General Settings",
+    "propertySettings": "Property Settings",
+    "rolesPermissions": "Roles And Permissions",
+    "users": "Users",
+    "paymentSettings": "Payment Settings",
+    "pricing": "Pricing",
+    "policies": "Policies",
+    "taxes": "Taxes",
+    "services": "Services",
+    "seasons": "Seasons",
+    "currency": "Currency",
+    "geo-location": "Geo Location",
+    "dependents": "Dependents",
+    "channel-booking": "Channel Booking",
+    "customer-type": "Customer Type",
+    "meal-plan": "Meal Plan",
+    "bed-type": "Bed Type",
+    "roomType": "Room Type",
+    "roomView": "Room View",
+    "roomStatus": "Room Status",
+    "createNew": "Create New",
+    "englishName": "English Name",
+    "arabicName": "Arabic Name",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "status": "Status",
+    "input": {
+        "englishNameLabel": "English name",
+        "englishPlaceholder": "English name",
+        "arabicNameLabel": "Arabic name",
+        "arabicPlaceholder": "Arabic name",
+        "fieldRequired": "Field is required",
+        "onlyEnglishAllowed": "Field accepts only English",
+        "onlyArabicAllowed": "Field accepts only Arabic",
+        "email": "Email",
+        "emailPlaceholder": "Enter your Email",
+        "phone": "Phone Number",
+        "otherPhone": "Other Phone",
+        "whatsapp": "What's app Number",
+        "phoneFieldRequired": "Invalid Phone ",
+        "address": "Address",
+        "addressPlaceholder": "Enter your Address",
+        "website": "Website",
+        "websitePlaceholder": "Enter your Website",
+        "logo": "Logo",
+        "addlogo": " Add Logo",
+        "AddressEn": " english address",
+        "AddressAr": " arabic address",
+        "nationalID": "national Id",
+        "nationalIDPlaceholder": "Enter your name national Id",
+        "send": "send",
+        "englishDescriptionPlaceholder":"English Description",
+       "arabicDescriptionPlaceholder":"Arabic Description",
+       "addPrice":"Enter add on price"
+    },
+    "columns": {
+        "email": "Email",
+        "phone": "Phone Number",
+        "otherPhone": "Other Phone",
+        "address": "Address",
+        "website": "Website",
+        "seeAll": "See All",
+        "NationalId": "National Id",
+        "watsapp": "What’s app"
+    },
+    "msg": {
+        "arabicNameError": "This name already exists in Arabic",
+        "englishNameError": "This name already exists in English",
+        "errorMessage": "An error occurred",
+        "selectFacilityError": "Please select at least one facility",
+        "selectAmenityError": "Please select at least one amenity",
+        "roomMsg": "Room created successfully! ",
+        "customerMsg": "Customer created successfully!",
+        "blockedCustomer": "Customer Blocked successfully!",
+        "addonsReq": "Addons created successfully !",
+        "checkInMsg": "Checked in successfully!",
+        "purchaseMsg": "Purchase created successfully!",
+        "assign": "Assigned successfully!",
+        "roomTypeMsg": "Room Type created successfully!",
+        "roomViewMsg": "Room view created successfully!",
+        "roomStatusMsg": "Room status created successfully!",
+        "facilityMsg": "Facility created successfully!",
+        "amenityMsg": "Amenity created successfully!",
+        "addonsMsg": "Add Ons created successfully!",
+        "seassonMsg": "Season created successfully!",
+        "specialDaysMsg": "Special days created successfully!",
+        "workDaysMsg": "Work Days created successfully!",
+        "currencyMsg": "Currencies added successfully!",
+        "countryMsg": "Counteies added successfully !",
+        "governorateMsg": "governorateies added successfully !",
+        "cityMsg": "Cities added successfully !",
+        "vendorMsg": "Vendor created successfully!",
+        "itemMsg": "Item created successfully!",
+        "categoryMsg": "Category created successfully!",
+        "ageGroupMsg": "Age Group created successfully! ",
+        "dependentRelationshipMsg": "Dependent Relationship created successfully!",
+        "housekeepingTaskMsg": "Housekeeping Task created successfully! ",
+        "HouseKeeperMsg": "HouseKeeper created successfully!",
+        "workersMsg": " Maintenance worker created successfully!",
+        "specializationMsg": "Maintenance specialization created successfully!",
+        "channelBookingMsg": "Channel Booking created successfully!",
+        "customerTypeMsg": "Customer Type created successfully!",
+        "mealPlaneMsg": "Meal Plane created successfully! ",
+        "bedTypeMsg": "Bed Type created successfully!",
+        "hotelMsg": "Hotel created successfully!",
+        "branchMSg": "Branch created successfully!",
+        "buildingMsg": "Building created successfully!",
+        "floorMsg": "Floor created successfully!",
+        "paymentMethodMsg": "payment Method created successfully!",
+        "accountCategoryMsg": "Account Category created successfully!",
+        "accountTypeMsg": "Account Type created successfully!",
+        "paymentAccountMsg": "payment Method created successfully!",
+        "removefromBlocked": "Customer has been removed from the blacklist Successfully!",
+        "removeroomTypeMsg":"RoomType Deleted Successfully!",
+        "updateroomTypeMsg":"RoomType Updated Successfully!",
+        "removeroomViewMsg":"RoomView Deleted Successfully!",
+        "updateroomViewMsg":"RoomView Updated Successfully!",
+        "updateroomStatusMsg":"RoomStatus Updated Successfully!",
+        "removeroomStatusMsg":"RoomStatus Deleted Successfully!",
+        "removeFacilityMsg":"Facility Deleted Successfully!",
+        "removeAmenityMsg":"Amenity Deleted Successfully",
+        "updatefacilityMsg":"Facility Updated Successfully!",
+        "updateamenityMsg":"Amenity Updated Successfully!",
+        "removeAddOnMsg":"AddOn Deleted Successfully!",
+        "updateaddonMsg":"AddOn Updated Successfully!",
+        "removeSeasonMsg":"Season Deleted Successfully!",
+        "updateSeasonMsg":"Season Updated Successfully!",
+        "removeSpecializationMsg":"Specialization Deleted Successfully!",
+        "updateSpecializationMsg":"Specialization Updated Successfully!",
+        "removeWorkerMsg":"Worker Deleted Successfully!",
+        "updateWorkerMsg":"Worker Updated Successfully!",
+        "removeHouseKeeperTaskMsg":"HouseKeeper Deleted Successfully!",
+        "updateHouseKeeperTaskMsg":"HouseKeeper Task Updated Successfully!",
+        "removeHouseKeeperMsg":"HouseKeeper Deleted Successfully!",
+        "removeVendorMsg":"Vendor Deleted Successfully!",
+        "updateVendorMsg":"Vendor Updated Successfully!",
+        "updateCategoryMsg":"Category Updated Successfully!",
+        "removeCategoryMsg":"Category Deleted Successfully!",
+        "removeDependentTypeMsg":"Dependent Type Deleted Successfully!",
+        "removeDependentRelationMsg":"Dependent Relation Deleted Successfully!",
+        "updateGroupMsg":"Group Updated Successfully!",
+        "removeChannelMsg":"Channel Deleted Successfully!",
+        "updateChannelMsg":"Channel Updated Successfully!",
+        "removeMealPlanMsg":"Meal Plan Deleted Successfully!",
+        "removebedTypeMsg":"Bed Type Deleted Successfully!",
+        "removeCustomerTyprMsg":"Customer Type Deleted Successfully!",
+        "updateCustomerTypeMsg":"Customer Type Updated Successfully!",
+        "removeCurrencyMsg":"Currency Deleted Successfully!",
+        "removeCountryMsg":"Country Deleted Successfully!",
+        "removePaymentMethodMsg":"PaymentMethod Deleted Successfully!",
+        "updatepaymentMethodMsg":"PaymentMethod Updated Successfully!",
+        "updateaccountCategoryMsg":"Account Category Updated Successfully!",
+        "removeAccountCategoryMsg":"Account Category Deleted Successfully!",
+        "removeAccountTypeMsg":"Account Type Deleted Successfully!",
+        "updateaccountTypeMsg":"Account Type Updated Successfully!"
+
+
+
+
+
+
+
+    },
+    "formButton": {
+        "add": "Add",
+        "clear": "clear"
+    },
+    "roomViewTable": {
+        "color": "Color"
+    },
+    "Facility": "Facility",
+    "Amenity": "Amenity",
+    "AddOn": "Add-On",
+    "Facilities": "Facilities",
+    "Amenities": "Amenities",
+    "AddOns": "Add Ons",
+    "facilityForms": {
+        "englishNameDescription": "Facility English Description",
+        "arabicNameDescription": "Facility Arabic Description"
+    },
+    "amenityForms": {
+        "englishNameDescription": "Amenity English Description",
+        "arabicNameDescription": "Amenity Arabic Description"
+    },
+    "addOnForms": {
+        "englishNameDescription": "Add Ons English Description",
+        "arabicNameDescription": "Add Ons Arabic Description",
+        "addOnsPrice": "Add On Price",
+        "enterAddonPrice": "Enter add-on price",
+        "requireDependents": "Require Dependents",
+        "availability": "Availability"
+    },
+    "season": "season",
+    "special-day": "special day",
+    "special-days": "special days ",
+    "workdays": "Work Days",
+    "workday": "Work Day",
+    "days": "Days",
+    "seasonForms": {
+        "successMessage": "Season created successfully!",
+        "start_date": "Start Date",
+        "end_date": "End Date",
+        "date_placeholder": "YYYY-MM-DD"
+    },
+    "selectInput": {
+        "select": "Select",
+        "choose": "Choose",
+        "add": "add"
+    },
+    "inventories": {
+        "comment": "This is inventories tab and subtabs",
+        "vendor": "Vendor",
+        "theVendor": "بائع",
+        "allVendors": "vendors",
+        "category": "Category",
+        "item": "Item",
+        "minQuantity": "Minimum Quantity",
+        "placeholderminQuantity": "Enter Minimum Quantity",
+        "products": "products",
+        "product": "product",
+        "Purchase": "Purchase",
+        "createPurchase": "Create Purchase",
+        "unitPrice": "Unit price",
+        "placeholderUnitPrice": "Enter Unit price",
+        "vendors": {
+            "successMessage": "vendor created successfully!"
+        },
+        "categories": {
+            "successMessage": "category created successfully!"
+        },
+        "items": {
+            "successMessage": "item created successfully!",
+            "englishNameDescription": "item English Description",
+            "arabicNameDescription": "item Arabic Description"
+        }
+    },
+    "dependentsSection": {
+        "dependentType": "Dependent Type",
+        "dependentRelationship": "Dependent Relationship",
+        "ageGroup": "Age Group"
+    },
+    "housekeepingSection": {
+        "housekeeperTask": "HouseKeeper Task",
+        "housekeeper": "HouseKeeper",
+        "task": "Task"
+    },
+    "maintenanceSection": {
+        "specialization": "Specialization",
+        "workers": "Workers"
+    },
+    "percentage": {
+        "percentage": "Percentage",
+        "percentagePlaceholder": "Enter Percentage"
+    },
+    "hotel": "Hotel",
+    "branch": "Branch",
+    "building": "Building",
+    "floor": "Floor",
+    "room": "Room",
+    "hotels": "Hotels",
+    "branches": "Branches",
+    "buildings": "Buildings",
+    "floors": "Floors",
+    "hotelColumn": {
+        "hotelBranches": "Hotel Branches"
+    },
+    "geoLocationTabs": {
+        "country": "Country",
+        "governorate": "Governorate",
+        "city": "City",
+        "countries": "countries",
+        "governorates": "governorates",
+        "cities": "cities",
+        "latitude": "latitude",
+        "longitude": "Longitude",
+        "capitalNameEnglish": "Capital Name English",
+        "capitalNameArabic": "Capital Name Aeabic",
+        "countryMsg": "Country added successfully!",
+        "governorateMsg": "Governorate added successfully!",
+        "cityMsg": "City added successfully!"
+    },
+    "createRoomForm": {
+        "singleRoom": "Single Room",
+        "multiRoom": "Multiple Room",
+        "englishNamePrefix": {
+            "label": "English Name Prefix",
+            "placeholder": "Enter room’s name prefix",
+            "required": "Field is required",
+            "pattern": "Accepts more than one word without numbers at first"
+        },
+        "englishNameNumber": {
+            "label": "English Name Number",
+            "placeholder": "Enter room’s number",
+            "required": "Field is required",
+            "validate": "Positive only"
+        },
+        "englishNameSuffix": {
+            "label": "English Name Suffix",
+            "placeholder": "Enter room’s name suffix",
+            "pattern": "Field accepts only letters"
+        },
+        "arabicNamePrefix": {
+            "label": "Arabic Name Prefix",
+            "placeholder": "Enter room’s name prefix",
+            "required": "Field is required",
+            "pattern": "Accepts more than one word without numbers at first"
+        },
+        "arabicNameNumber": {
+            "label": "Arabic Name Number",
+            "placeholder": "Enter room’s number",
+            "required": "Field is required",
+            "validate": "Positive only"
+        },
+        "arabicNameSuffix": {
+            "label": "Arabic Name Suffix",
+            "placeholder": "Enter room’s name suffix",
+            "pattern": "Field accepts only letters"
+        },
+        "numberOfBeds": {
+            "label": "Maximum Number of Beds",
+            "placeholder": "Enter number of beds"
+        },
+        "defaultRoomPrice": {
+            "label": "Room Default Price",
+            "placeholder": "Enter room default price"
+        },
+        "isBedReservable": {
+            "label": "Room can be reserved by bed"
+        },
+        "generateRoom": {
+            "generateNumber": "Generate Number Of Rooms",
+            "placeholder": "Enter number of generate "
+        }
+    },
+    "paymentTab": {
+        "paymentMethod": "Payment Method",
+        "accountCategory": "Account Category",
+        "accountType": "Account Type",
+        "paymentAccount": {
+            "paymentAccount": "Payment Account",
+            "paymentNumber": "Payment Account Number",
+            "placeholder": "Enter Payment Account number "
+        }
+    },
+    "propertyTab": {
+        "hotels": "Hotels",
+        "branches": "Branches",
+        "buildings": "Buildings",
+        "floors": "Floors",
+        "bed-type": "Bed Type",
+        "paymentAccount": {
+            "paymentAccount": "Payment Account",
+            "paymentNumber": "Payment Account Number",
+            "placeholder": "Enter Payment Account number "
+        }
+    },
+    "RoomSection": {
+        "RoomNumber": "Room No.",
+        "type": "Room Type",
+        "maintenance": "Maintenance",
+        "roomMenu": {
+            "checkout": "Check Out",
+            "Blocked": "Add to black list"
+        },
+        "cleaningStatus": "Cleaning Status",
+        "reservationStatus": "Reservation Status",
+        "guest": "Guest",
+        "empty": "Empty",
+        "filled": "Filled",
+        "notCleaned": "not cleaned",
+        "cleaned": "Cleaned",
+        "roomProfile": "room profile",
+        "revenueAndFinancials": "Revenue and Financials",
+        "roomFeatures": "Room Features"
+    },
+    "CustomerSection": {
+        "customer": "Customer",
+        "id": "id",
+        "customerMenu": {
+            "checkIn": "check in",
+            "checkOut": "check out",
+            "Blocked": "Add to black list"
+        },
+        "singleReq": "Single Request ",
+        "groupReq": "Group Request ",
+        "allSingleReq": "All Single Requests ",
+        "allGroupReq": "All Group Requests  ",
+        "none": "None",
+        "adressErrorMsg": "Invalid address",
+        "profile": "profile",
+        "bookingHistory": "booking history",
+        "stayingHistory": "staying history",
+        "paymentInformation": "Payment Information",
+        "preferencesFeedback": "preferences and feedback"
+    },
+    "BlacklistSection": {
+        "customers": "customers",
+        "addCustomerToBlacklist": "add customer to blacklist",
+        "addedBy": "Added By",
+        "addedAt": "Added At",
+        "updatedBy": "Updated By",
+        "updatedAt": "Updated At",
+        "remove": "Remove",
+        "blackListedCustomerDetails": "Black Listed Customer Details",
+        "checkYourEmail": "Please, Check your Email",
+        "errorOccurred": "An error occurred",
+        "BlacklistedReasons": "Reasons For Being Blacklisted",
+        "reason": "Reason",
+        "notes": "notes"
+    },
+    "maintanance": {
+        "Maintanance": "Maintanance",
+        "location": "location",
+        "Specialization": "Specialization",
+        "MaintenanceWorker": "Maintenance Worker",
+        "maintananceTask": "Maintenance Task"
+    },
+    "resetPassword": {
+        "title": "Reset Password",
+        "instruction": "Please enter your email to send verification code",
+        "newPasswordTitle": "Please Enter your new password",
+        "reEnterNewPassword": "Re-enter New Password",
+        "newPassword": "New Password"
+    },
+    "otp": {
+        "title": "OTP Code",
+        "instruction": "Please enter your OTP code",
+        "resend": "Resend code",
+        "ariaLabel": "Enter OTP code",
+        "invalid": "Invalid or expired OTP. Please try again.",
+        "submit": "Verify OTP"
+    },
+    "hotelSelection": {
+        "selectHotel": "Select Hotel",
+        "continue": "continue"
+    },
+    "footer": {
+        "changeLog": "change log",
+        "privacy": "privacy",
+        "terms": "terms",
+        "poweredBy": "powerd by",
+        "version1": "version 1"
+    },
+    "usersSection": {
+        "user": " user",
+        "role": "role"
+    },
+    "AuthMsg": {
+        "loginSuccess": "Login Successfully",
+        "loginFailed": "Login failed",
+        "checkMail": "Please, Check your Email",
+        "invaildEmail": "Invaild Email",
+        "verifyOTP": "We have sent you an OTP to reset your password",
+        "invaildOTP": "Invalid or expired OTP",
+        "resetSuccess": "Your Password has Reset Successfully",
+        "resetError": "Passwords do not match"
+    },
+    "validation": {
+        "emailRequired": "Email is required.",
+        "invalidEmailPattern": "Please enter a valid email address.",
+        "usernameRequired": "Username is required.",
+        "usernameMin": "Username must be at least 4 characters.",
+        "usernameMax": "Username cannot exceed 20 characters.",
+        "usernamePattern": "Invalid username format.",
+        "passwordRequired": "Password is required.",
+        "passwordMin": "Password must be at least 8 characters.",
+        "passwordPattern": "Password must contain an uppercase letter, a number, and a special character.",
+        "newPasswordRequired": "New Password is required.",
+        "newPasswordMinLength": "Password must be at least 8 characters.",
+        "newPasswordPattern": "Password must contain an uppercase letter, a number, and a special character.",
+        "passwordsDoNotMatch": "Passwords do not match.",
+        "englishContent":"Only English Letters are allowed",
+        "arabicContent":"Only Arabic Letters are Allowed"
+    },
+    "aria": {
+        "enterEmail": "Enter your email address",
+        "emailInfo": "We'll use this to send you a verification code.",
+        "switchToEnglish": "Switch to English",
+        "switchToArabic": "Switch to Arabic"
+    },
+    "language": {
+        "english": "English",
+        "arabic": "العربية"
+    },
+    "login": {
+        "success": "Login successfully!",
+        "error": "An error occurred. Please try again."
+    },
+    "btn":{
+        "add":"Add",
+        "clear":"Clear",
+        "edit"  :"Edit"
+    }
+}

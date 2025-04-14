@@ -1,0 +1,157 @@
+/* start header */
+
+header {
+    padding-top: 25px;
+    background-color: var(--px-main-bg-color);
+}
+
+.collaps-btn {
+    font-size: 2rem;
+    color: var(--px-main-color-blue);
+    cursor: pointer;
+}
+
+.header-search {
+    height: fit-content;
+    position: relative;
+}
+
+.header-search input {
+    width: 100%;
+}
+
+.header-search i {
+    position: absolute;
+    color: var(--px-input-placeholder-color);
+    top: 30%;
+    left: 1%;
+    font-size: 20px;
+}
+
+.notifications {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.notification-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+}
+
+.theme-mode {
+    width: 96px;
+    height: 36px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.slide {
+    width: 40%;
+    height: 80%;
+    background-color: var(--px-main-color-blue);
+    position: absolute;
+    inset: 10% 50% 10% 5%;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.light-mode {
+    color: var(--px-color-white);
+}
+
+.dark-mode {
+    color: var(--px-main-color-blue);
+}
+
+.theme-mode input:checked+.slide {
+    inset: 10% 5% 10% 50%;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.active-breadcrumbs {
+    color: var(--px-main-color-blue)
+}
+
+.collaps-side-links {
+    height: 0;
+    background-color: var(--px-color-white);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 1px 1px 10px #dfdede;
+    transition: all .3s ease-in-out;
+    z-index: 2;
+    overflow: hidden;
+    font-size: 18px;
+    color: var(--px-gray-bg-color);
+}
+
+.collaps-active-side-links {
+    height: 100vh;
+    transition: all .3s ease-in-out;
+}
+
+.mobile-side-head {
+    background-color: var(--px-light-blue);
+}
+
+.mobile-side-head .user-image {
+    width: 67px;
+    height: 67px;
+}
+
+.mobile-side-head .user-name {
+    font-weight: 500;
+    color: var(--px-gray-bg-color);
+}
+
+.close-mobile-side-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--px-color-white);
+    margin: 15px 15px 10px auto;
+}
+
+.mobile-side-links {
+    min-height: 60%;
+}
+
+.mobile-side-footer {
+    font-size: 14px;
+}
+
+.mobile-side-footer span {
+    color: var(--px-main-color-blue);
+}
+
+.select-hotel-btn .show:focus,
+.select-hotel-btn .btn:focus {
+    border: none !important;
+}
+.select-hotel-btn ::after{
+    display: none !important;
+}
+
+@media screen and (max-width:992px) {
+    .left-side-links {
+        width: 40%;
+    }
+}
+
+/* end header */

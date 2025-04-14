@@ -1,0 +1,41 @@
+start footer */
+.px-footer {
+    border-radius: 10px;
+}
+
+footer a {
+    color: var(--px-main-color-blue) !important;
+    text-decoration: underline;
+}
+
+.foot-links a {
+    color: #000 !important;
+}
+
+.foot-links a:hover {
+    color: #000 !important;
+}
+
+.version {
+    border-left: 1px solid var(--px-input-placeholder-color);
+}
+
+.mobile-footer-nav {
+    font-size: 1.5rem;
+}
+
+.mobile-footer-nav a {
+    color: var(--px-text-color-gray) !important;
+}
+
+.mobile-footer-nav .active-foot-link a {
+    color: var(--px-main-color-blue) !important;
+}
+
+@media screen and (min-width:992px) {
+    .px-footer {
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+/* end footer

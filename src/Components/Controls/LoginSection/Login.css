@@ -1,0 +1,81 @@
+/* start login */
+
+
+
+
+
+
+@media (max-width: 575.98px) {
+    .container-sm {
+        width: 83% !important;
+    }
+
+    .rememberForget {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap !important;
+    }
+
+    .rememberForget.row>* {
+        flex-shrink: 1 !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .rememberForget.row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+.wrong-login,
+.right-login {
+    height: fit-content;
+    width: 30%;
+    border-radius: 7px;
+    background-color: var(--px-color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.wrong-login::before {
+    background-color: var(--px-wrong-color);
+}
+
+.wrong-login::before,
+.right-login::before {
+    content: "";
+    height: 100%;
+    width: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.wrong-login i {
+    color: var(--px-wrong-color);
+}
+
+.right-login::before {
+    background-color: var(--px-right-color);
+}
+
+.right-login i {
+    color: var(--px-right-color);
+}
+
+.password {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    color: var(--px-input-placeholder-color);
+    cursor: pointer;
+}
+
+/* end sign in */

@@ -1,0 +1,470 @@
+{
+    "sign_in": "تسجيل الدخول",
+    "please_sign_in": "الرجاء تسجيل الدخول باستخدام حسابك",
+    "username_placeholder": "اسم المستخدم",
+    "password_placeholder": "كلمة المرور",
+    "remember_me": "تذكرني",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "field_required": "هذا الحقل مطلوب",
+    "sign_in_button": "تسجيل الدخول",
+    "accessDenied": "تم رفض الوصول",
+    "loginFaild": "البيانات المدخلة غير صحيحة",
+    "welcomeTo": "مرحبًا بك في {{hotel}}",
+    "search": "بحث",
+    "notifications": "الإشعارات",
+    "forms": "النماذج",
+    "exports": "التصدير",
+    "backupRestore": "نسخ احتياطي واستعادة",
+    "reports": "التقارير",
+    "settings": "الإعدادات",
+    "aboutApp": "عن التطبيق",
+    "logout": "تسجيل الخروج",
+    "userPhoto": "صورة المستخدم",
+    "poweredBy": "بدعم من",
+    "dashboard": "الرئيسية ",
+    "reservations": "الحجوزات",
+    "singleRequests": "طلبات فردية",
+    "groupRequests": "طلبات جماعية",
+    "addonRequests": "طلبات إضافية",
+    "rooms": "الغرف",
+    "calendar": "التقويم",
+    "customers": "العملاء",
+    "blackList": "القائمة السوداء",
+    "inventory": "المخزون",
+    "allProducts": "جميع المنتجات",
+    "vendor": "البائع",
+    "housekeeping": "خدمة الغرف",
+    "maintenance": "الصيانة",
+    "invoices": "الفواتير",
+    "nightAuditor": "مدقق ليلي",
+    "generalSettings": "إعدادات عامة",
+    "propertySettings": "إعدادات العقار",
+    "rolesPermissions": "الأدوار والصلاحيات",
+    "users": "المستخدمون",
+    "paymentSettings": "إعدادات الدفع",
+    "pricing": "التسعير",
+    "policies": "سياسة الاستخدام",
+    "taxes": "الضرائب",
+    "services": "الخدمات",
+    "seasons": "المواسم",
+    "currency": "العملة",
+    "geo-location": "الموقع الجغرافي",
+    "dependents": "المعالون",
+    "channel-booking": "مصدر الحجز",
+    "customer-type": "نوع العميل",
+    "meal-plan": "خطة الوجبة",
+    "bed-type": "نوع السرير",
+    "roomType": "نوع الغرفة",
+    "roomView": "إطلالة الغرفة",
+    "roomStatus": "حالة الغرفة",
+    "createNew": "إنشاء ",
+    "englishName": "الاسم بالإنجليزية",
+    "arabicName": "الاسم بالعربية",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "status": "الحالة",
+    "input": {
+        "englishNameLabel": "بالإنجليزية",
+        "englishPlaceholder": "الاسم بالإنجليزية",
+        "englishDescriptionPlaceholder": "وصف بالإنجليزية",
+        "arabicNameLabel": "بالعربية",
+        "arabicPlaceholder": "الاسم بالعربية",
+        "arabicDescriptionPlaceholder": "وصف بالعربية",
+        "fieldRequired": "الحقل مطلوب",
+        "onlyEnglishAllowed": "الحقل يقبل الإنجليزية فقط",
+        "onlyArabicAllowed": "الحقل يقبل العربية فقط",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "برجاء إدخال البريد الإلكتروني",
+        "phone": "رقم الهاتف المحمول",
+        "otherPhone": "رقم هاتف اخر",
+        "whatsapp": "رقم الواتساب ",
+        "phoneFieldRequired": " رقم غير صالح",
+        "address": "العنوان",
+        "website": "موقع إلكتروني",
+        "websitePlaceholder": "ادخل الموقع الإلكتروني",
+        "logo": "شعار",
+        "addlogo": "إضافة شعار",
+        "AddressEn": "العنوان بالإنجليزية",
+        "AddressAr": "العنوان بالعربية",
+        "nationalID": "الهوية الوطنية",
+        "nationalIDPlaceholder": "برجاء أدخل الهوية الوطنية",
+        "send": "إرسال"
+    },
+    "columns": {
+        "email": "البريد الألكتروني",
+        "phone": "رقم الهاتف المحمول",
+        "otherPhone": "رقم هاتف اخر",
+        "address": "العنوان",
+        "website": "موقع إلكتروني",
+        "NationalId": "الهوية الوطنية",
+        "watsapp": "واتساب"
+    },
+    "formButton": {
+        "add": "إضافة",
+        "clear": "مسح"
+    },
+    "msg": {
+        "arabicNameError": " هذا الاسم موجود بالفعل بالعربية",
+        "englishNameError": "هذا الاسم موجود بالفعل بالإنجليزية",
+        "errorMessage": "حدث خطأ",
+        "selectFacilityError": "يرجى اختيار مرفق واحد على الأقل",
+        "selectAmenityError": "يرجى اختيار وسيلة راحة واحدة على الأقل",
+        "roomMsg": "تم إنشاء الغرفة بنجاح !",
+        "customerMsg": "تم إنشاء العميل بنجاح !",
+        "blockedCustomer": "تم حظر العميل بنجاح!",
+        "addonsReq": "تم إنشاء الإضافة بنجاح !",
+        "checkInMsg": "تم تسجيل الوصول بنجاح !",
+        "purchaseMsg": "تم إنشاء عملية الشراء بنجاح!",
+        "assign": "تم التعيين بنجاح!",
+        "roomTypeMsg": "تم إنشاء نوع الغرفة بنجاح!",
+        "roomViewMsg": "تم إنشاء إطلالة الغرفة بنجاح!",
+        "roomStatusMsg": "تم إنشاء حالة الغرفة بنجاح!",
+        "facilityMsg": "تم إنشاء المرفق بنجاح!",
+        "amenityMsg": "تم إنشاء الخدمة المميزة بنجاح!",
+        "addonsMsg": "تم إنشاء الإضافة بنجاح!",
+        "seassonMsg": "تم إنشاء الموسم بنجاح!",
+        "specialDaysMsg": "تم إنشاء الأبام الخاصة بنجاح !",
+        "workDaysMsg": "تم إنشاء أيام العمل بنجاح !",
+        "currencyMsg": "تم إضافة العملات بنجاح !",
+        "countryMsg": "تم إضافة البلاد بنجاح !",
+        "governorateMsg": "تم إضافة المحافظات بنجاح !",
+        "cityMsg": "تم إضافة المدن بنجاح !",
+        "vendorMsg": "تم إضافة البائع بنجاح !",
+        "itemMsg": "تم إضافة المنتج بنجاح !",
+        "categoryMsg": "تم إضافة الفئة بنجاح !",
+        "ageGroupMsg": "تم إضافة الفئة العمرية بنجاح !",
+        "dependentRelationshipMsg": "تم إنشاء العلاقة التابعة بنجاح!",
+        "housekeepingTaskMsg": "تم إنشاء مهمة الغرفة بنجاح !",
+        "HouseKeeperMsg": "تم إنشاء موظف خدمة الغرف بنجاح !",
+        "workersMsg": "تم إنشاء عامل الصيانة بنجاح!",
+        "specializationMsg": "تم إنشاء تخصص الصيانة بنجاح!",
+        "channelBookingMsg": "تم إنشاء مصدرالحجز بنجاح !",
+        "customerTypeMsg": "تم إنشاء نوع العميل بنجاح !",
+        "mealPlaneMsg": "تم إنشاء الوجبة بنجاح !",
+        "bedTypeMsg": "تم إنشاء نوع السرير بنجاح !",
+        "hotelMsg": "تم إنشاء الفندق بنجاح !",
+        "branchMSg": "تم إنشاء الفرع بنجاح !",
+        "buildingMsg": "تم إنشاء المبني بنجاح !",
+        "floorMsg": "تم إنشاء الطابق بنجاح !",
+        "paymentMethodMsg": "تم إنشاء طريقة الدفع بنجاح!",
+        "accountCategoryMsg": "تم إنشاء فئة الحساب بنجاح!",
+        "accountTypeMsg": "تم إنشاء نوع الحساب بنجاح!",
+        "paymentAccountMsg": "تم إنشاء نوع الدفع بنجاح!",
+        "removefromBlocked": "تمت إزالة العميل من القائمة السوداء بنجاح !"
+    },
+    "roomViewTable": {
+        "color": "اللون"
+    },
+    "Facility": "مرفق",
+    "Amenity": "خدمة مميزة ",
+    "AddOn": "إضافة",
+    "Facilities": "المرافق",
+    "Amenities": "خدمات مميزة",
+    "AddOns": "الإضافات",
+    "facilityForms": {
+        "englishNameDescription": "وصف مرفق بالإنجليزية",
+        "arabicNameDescription": "وصف مرفق بالعربية"
+    },
+    "amenityForms": {
+        "englishNameDescription": "وصف خدمة بالإنجليزية",
+        "arabicNameDescription": "وصف خدمة بالعربية"
+    },
+    "addOnForms": {
+        "englishNameDescription": "وصف الإضافة بالإنجليزية",
+        "arabicNameDescription": "وصف الإضافة بالعربية",
+        "addOnsPrice": "سعر الإضافة",
+        "enterAddonPrice": "أدخل سعر الإضافة",
+        "requireDependents": "تتطلب التابعين",
+        "availability": "متاح"
+    },
+    "season": "موسم",
+    "special-day": "يوم خاص",
+    "special-days": "أيام خاصة",
+    "workdays": "أيام العمل",
+    "workday": "يوم العمل ",
+    "days": "أيام",
+    "seasonForms": {
+        "successMessage": "تم إنشاء الموسم بنجاح!",
+        "start_date": "تاريخ البدء",
+        "end_date": "تاريخ الانتهاء",
+        "date_placeholder": "سنة-شهر-يوم"
+    },
+    "selectInput": {
+        "select": "حدد",
+        "choose": "اختر",
+        "add": "أضف"
+    },
+    "inventories": {
+        "_comment": "This is inventories tab and subtabs",
+        "theVendor": "بائع",
+        "vendor": "البائع",
+        "allVendors": "البائعون",
+        "category": "الفئة",
+        "item": "العنصر",
+        "minQuantity": "الحد الأدنى للكمية",
+        "placeholderminQuantity": "أدخل الحد الأدني من الكمية",
+        "products": "المنتجات",
+        "product": "منتج",
+        "Purchase": "شراء",
+        "createPurchase": "عملية شراء",
+        "unitPrice": "السعر",
+        "placeholderUnitPrice": "أدخل السعر",
+        "vendors": {
+            "successMessage": "تم إنشاء البائع بنجاح!"
+        },
+        "categories": {
+            "successMessage": "تم إنشاء الفئة بنجاح!"
+        },
+        "items": {
+            "successMessage": "تم إنشاء العنصر بنجاح!",
+            "englishNameDescription": "وصف العنصر بالإنجليزية",
+            "arabicNameDescription": "وصف العنصر بالعربية"
+        }
+    },
+    "dependentsSection": {
+        "dependentType": "نوع المعالين",
+        "dependentRelationship": "علاقة المعالين",
+        "ageGroup": "الفئة العمرية"
+    },
+    "housekeepingSection": {
+        "housekeeperTask": "مهمة قسم خدمات الغرف",
+        "housekeeper": "موظف خدمة الغرف",
+        "task": "مهمة",
+        "houseKeeper": "موظف"
+    },
+    "maintenanceSection": {
+        "specialization": "التخصص",
+        "workers": "العمال"
+    },
+    "percentage": {
+        "percentage": "النسبة المئوية",
+        "percentagePlaceholder": " ادخل النسبة المئوية"
+    },
+    "hotel": "فندق",
+    "branch": "فرع",
+    "building": "مبني",
+    "floor": "طابق",
+    "room": "غرفة",
+    "hotels": "الفنادق",
+    "branches": "الفروع",
+    "buildings": "المباني",
+    "floors": "الطوابق",
+    "hotelColumn": {
+        "hotelBranches": "فروع الفندق"
+    },
+    "geoLocationTabs": {
+        "country": "البلد",
+        "governorate": "المحافظة",
+        "city": "المدينة",
+        "countries": "البلاد",
+        "governorates": "المحافظات",
+        "cities": "المدن",
+        "latitude": "خط العرض",
+        "longitude": "خط الطول",
+        "capitalNameEnglish": "اسم العاصمة بالانجليزية",
+        "capitalNameArabic": "اسم العاصمة بالعربية",
+        "countryMsg": "تم إضافة البلد بنجاح !",
+        "governorateMsg": "تم إضافة المحافظة بنجاح !",
+        "cityMsg": "تم إضافة المدينة بنجاح !"
+    },
+    "createRoomForm": {
+        "singleRoom": "غرفة فردية",
+        "multiRoom": "غرف متعددة ",
+        "englishNamePrefix": {
+            "label": "المقطع الأول بالإنجليزية",
+            "placeholder": "أدخل المقطع الأول للغرفة",
+            "required": "الحقل مطلوب",
+            "pattern": "يقبل أكثر من كلمة بدون أرقام في البداية"
+        },
+        "englishNameNumber": {
+            "label": "رقم المقطع الأوسط",
+            "placeholder": "أدخل رقم الغرفة",
+            "required": "الحقل مطلوب",
+            "validate": "فقط الأرقام الموجبة"
+        },
+        "englishNameSuffix": {
+            "label": "المقطع الأخير بالإنجليزية",
+            "placeholder": "أدخل المقطع الأخير للغرفة",
+            "pattern": "الحقل يقبل الحروف فقط"
+        },
+        "arabicNamePrefix": {
+            "label": "المقطع الأول بالعربية",
+            "placeholder": "أدخل المقطع الأول للغرفة",
+            "required": "الحقل مطلوب",
+            "pattern": "يقبل أكثر من كلمة بدون أرقام في البداية"
+        },
+        "arabicNameNumber": {
+            "label": "رقم المقطع الأوسط",
+            "placeholder": "أدخل رقم الغرفة",
+            "required": "الحقل مطلوب",
+            "validate": "فقط الأرقام الموجبة"
+        },
+        "arabicNameSuffix": {
+            "label": "المقطع الأخير بالعربية",
+            "placeholder": "أدخل المقطع الأخير للغرفة",
+            "pattern": "الحقل يقبل الحروف فقط"
+        },
+        "numberOfBeds": {
+            "label": "الحد الأقصى لعدد الأسرة",
+            "placeholder": "أدخل عدد الأسرة"
+        },
+        "defaultRoomPrice": {
+            "label": "سعر الغرفة الافتراضي",
+            "placeholder": "أدخل سعر الغرفة الافتراضي"
+        },
+        "isBedReservable": {
+            "label": "يمكن حجز الغرفة حسب السرير"
+        },
+        "generateRoom": {
+            "generateNumber": " عدد تكرار الغرف",
+            "placeholder": "أدخل رقم التكرار  "
+        }
+    },
+    "paymentTab": {
+        "paymentMethod": "طريقة الدفع",
+        "accountCategory": "فئة الحساب",
+        "accountType": "نوع الحساب",
+        "paymentAccount": {
+            "paymentAccount": "حساب الدفع",
+            "paymentNumber": " رقم حساب الدفع",
+            "placeholder": "أدخل رقم الحساب"
+        }
+    },
+    "RoomSection": {
+        "RoomNumber": "رقم الغرفة",
+        "type": "نوع الغرفة",
+        "maintenance": "الصيانة",
+        "roomMenu": {
+            "checkout": "إتمام الخروج",
+            "Blocked": "إضافة إلي القائمة السوداء"
+        },
+        "cleaningStatus": "حالة التنظيف",
+        "reservationStatus": "حالة الحجز",
+        "guest": "الضيف",
+        "empty": "فارغة",
+        "filled": "ممتلئة",
+        "notCleaned": "غير نظيفة",
+        "cleaned": "نظيفة",
+        "roomProfile": "ملف الغرفة",
+        "revenueAndFinancials": "الإيرادات والماليات",
+        "roomFeatures": "مميزات الغرفة"
+    },
+    "CustomerSection": {
+        "customer": "عميل",
+        "id": "الرقم التعريفي",
+        "allCustomers": "كل العملاء",
+        "customerMenu": {
+            "checkIn": "إتمام الدخول",
+            "checkout": "إتمام الخروج",
+            "Blocked": "إضافة إلي القائمة السوداء"
+        },
+        "singleReq": "الطلبات الفردية",
+        "groupReq": "الطلبات المتعددة",
+        "allSingleReq": "كل الطلبات الفردية",
+        "allGroupReq": "كل الطلبات المتعددة",
+        "none": "لا يوجد",
+        "adressErrorMsg": "عنوان غير صالح",
+        "profile": "ملف العميل",
+        "bookingHistory": "سجل الحجوزات",
+        "stayingHistory": "سجل الإقامات",
+        "paymentInformation": "معلومات الدفع",
+        "preferencesFeedback": "الآراء والمقترحات"
+    },
+    "BlacklistSection": {
+        "customers": "العملاء",
+        "addCustomerToBlacklist": "إضافة عميل إلى القائمة السوداء",
+        "addedBy": "أضيف بواسطة",
+        "createBlackListed": "حظر عميل",
+        "addedAt": "تاريخ الإضافة",
+        "updatedBy": "تحديث بواسطة",
+        "updatedAt": "تاريخ التحديث",
+        "remove": "إزالة",
+        "blackListedCustomerDetails": "تفاصيل العميل المحظور",
+        "checkYourEmail": "يرجى التحقق من بريدك الإلكتروني",
+        "errorOccurred": "حدث خطأ",
+        "BlacklistedReasons": "أسباب الحظر",
+        "reason": "سبب",
+        "notes": "ملاحظات"
+    },
+    "maintananceSection": {
+        "Maintanance": "الصيانة",
+        "location": "المكان",
+        "Specialization": "التخصص",
+        "MaintenanceWorker": "موظف الصيانة",
+        "maintananceTask": "مهمة صيانة"
+    },
+    "resetPassword": {
+        "title": "إعادة تعيين كلمة المرور",
+        "instruction": "يرجى إدخال بريدك الإلكتروني لإرسال رمز التحقق",
+        "newPasswordTitle": "يرجى إدخال كلمة المرور الجديدة",
+        "reEnterNewPassword": "أعد إدخال كلمة المرور الجديدة",
+        "newPassword": "كلمة المرور الجديدة"
+    },
+    "otp": {
+        "title": "رمز التحقق",
+        "instruction": "يرجى إدخال رمز التحقق",
+        "resend": "إعادة إرسال الرمز",
+        "ariaLabel": "أدخل رمز التحقق",
+        "invalid": "رمز التحقق غير صالح أو منتهي الصلاحية. حاول مرة أخرى",
+        "submit": "تحقق من الرمز"
+    },
+    "hotelSelection": {
+        "selectHotel": "اختر الفندق",
+        "continue": "متابعة"
+    },
+    "footer": {
+        "changeLog": "سجل التغييرات",
+        "privacy": "الخصوصية",
+        "terms": "الشروط",
+        "poweredBy": "مدعوم من",
+        "version1": "النسخة التجريبية الأولى"
+    },
+    "usersSection": {
+        "user": " مستخدم",
+        "role": "الدور"
+    },
+    "AuthMsg": {
+        "loginSuccess": "تم تسجيل الدخول بنجاح",
+        "loginFailed": "خطأ تسجيل الدخول",
+        "checkMail": "من فضلك، تحقق من البريد الإلكتروني الخاص بك",
+        "invaildEmail": "البريد الإلكتروني غير موجود",
+        "verifyOTP": "لقد أرسلنا لك كلمة مرور لمرة واحدة (OTP) لإعادة تعيين كلمة المرور الخاصة بك",
+        "invaildOTP": "كلمة المرور لمرة واحدة (OTP) غير صالحة أو منتهية الصلاحية",
+        "resetSuccess": "تمت إعادة تعيين كلمة المرور الخاصة بك بنجاح",
+        "resetError": "كلمات المرور غير متطابقة"
+    },
+    "validation": {
+        "emailRequired": "البريد الإلكتروني مطلوب.",
+        "invalidEmailPattern": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+        "usernameRequired": "اسم المستخدم مطلوب.",
+        "usernameMin": "يجب أن يكون اسم المستخدم 4 أحرف على الأقل.",
+        "usernameMax": "لا يمكن أن يتجاوز اسم المستخدم 20 حرفًا.",
+        "usernamePattern": "تنسيق اسم المستخدم غير صالح.",
+        "passwordRequired": "كلمة المرور مطلوبة.",
+        "passwordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+        "passwordPattern": "يجب أن تحتوي كلمة المرور على حرف كبير ورقم وحرف خاص.",
+        "newPasswordRequired": "كلمة المرور الجديدة مطلوبة.",
+        "newPasswordMinLength": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+        "newPasswordPattern": "يجب أن تحتوي كلمة المرور على حرف كبير ورقم وحرف خاص.",
+        "passwordsDoNotMatch": "كلمات المرور غير متطابقة."
+    },
+    "aria": {
+        "enterEmail": "أدخل عنوان بريدك الإلكتروني",
+        "emailInfo": "سنستخدم هذا لإرسال رمز التحقق إليك.",
+        "switchToEnglish": "التبديل إلى اللغة الإنجليزية",
+        "switchToArabic": "التبديل إلى اللغة العربية"
+
+
+    },
+    "language": {
+    "english": "English",
+    "arabic": "العربية"
+  },
+
+  "login": {
+    "success": "تم تسجيل الدخول بنجاح!",
+    "error": "حدث خطأ. حاول مرة أخرى."
+  }
+  
+}

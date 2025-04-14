@@ -1,0 +1,26 @@
+.error{
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: 500;
+    /* margin-left: 10px; */
+ }
+ .px-invalid-input {
+    /* position: relative; */
+    border-radius: 7px;
+    box-shadow: 0px 0px 4px 1px var(--px-wrong-color);
+   
+  }
+  .exclamation{
+    position: absolute;
+    left: 93%;
+    top:28%
+  }
+  input[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  input[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+  }
