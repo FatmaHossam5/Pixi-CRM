@@ -43,7 +43,7 @@
     "react-phone-number-input": "^3.4.5",
     "react-pro-sidebar": "^1.1.0",
     "react-router-dom": "^6.24.1",
-    "react-select": "^5.8.3",
+    "react-select": "^5.10.1",
     "react-toastify": "^10.0.6",
     "xlsx": "^0.18.5",
     "zustand": "^5.0.3"
