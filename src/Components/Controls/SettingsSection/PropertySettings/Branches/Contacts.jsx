@@ -24,51 +24,7 @@ const Contacts = () => {
   });
   const [openDropdownId, setopenDropdownId] = useState(null);
 
-  {/* Dummy Data */ }
 
-  // const dummyData = [
-  //   {
-  //     id: 1,
-  //     branch_name_en: "Branch 1",
-  //     phone: "123-456-7890",
-  //     city: {
-  //       city_name_en: "City 1",
-  //       governorate_info: {
-  //         governorate_name_en: "Governorate 1",
-  //         country_info: {
-  //           country_name_en: "Country 1"
-  //         }
-  //       }
-  //     },
-  //     branch_address_en: "Address 1",
-  //     commercial_registration_number: "CRN123",
-  //     tax_registration_number: "TRN123",
-  //     branch_email: "branch1@example.com",
-  //     branch_website: "http://branch1.com"
-  //   },
-  //   {
-  //     id: 2,
-  //     branch_name_en: "Branch 2",
-  //     phone: "987-654-3210",
-  //     city: {
-  //       city_name_en: "City 2",
-  //       governorate_info: {
-  //         governorate_name_en: "Governorate 2",
-  //         country_info: {
-  //           country_name_en: "Country 2"
-  //         }
-  //       }
-  //     },
-  //     branch_address_en: "Address 2",
-  //     commercial_registration_number: "CRN456",
-  //     tax_registration_number: "TRN456",
-  //     branch_email: "branch2@example.com",
-  //     branch_website: "http://branch2.com"
-  //   }
-  // ];
-  // useEffect(() => {
-  //   setData(dummyData);
-  // }, []);
 
   const handleDeleteModal = (id) => {
     setDeleteModalState({ isOpen: true, branchId: id });

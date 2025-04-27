@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 
@@ -25,16 +26,22 @@ const CreatePipeline = () => {
     setPipelineName('');
     setStages([{ id: Date.now(), name: '', color: '#000000' }]);
   };
-
-  const handleCreate = () => {
-    const pipelineData = {
-      pipelineName,
-      stages,
-    };
-    console.log('Creating pipeline:', pipelineData);
-    // Submit logic here
+  const handleCreate = async () => {
+    try {
+      const payload = {
+        name: pipelineName,
+        stages: stages.map(stage => ({ name: stage.name }))
+      };
+  
+      const response = await axios.post('https://tenant1.billiqa.com/api/pipelines', payload);
+      console.log('Pipeline created:', response.data);
+  
+      // Optionally clear the form after successful create
+      handleClear();
+    } catch (error) {
+      console.error('Error creating pipeline:', error);
+    }
   };
-
   return (
     <div className="container" >
      

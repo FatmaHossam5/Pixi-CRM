@@ -52,15 +52,15 @@ import { ToastContainer } from "react-toastify";
 import NotificationFlow from "./Components/Controls/NotificationFlow/NotificationFlow";
 import Contacts from "./Components/Controls/SettingsSection/PropertySettings/Branches/Contacts";
 import CreateRole from "./Components/Controls/SettingsSection/RolesAndPermissionSection/RoleDetailsSection/CreateRole";
-import Users from "./Components/Controls/SettingsSection/RolesAndPermissionSection/Users/Users";
 import Source from "./Components/Pages/Reservation/GroupRequest/Source";
 import RoleDetails from './Components/Pages/Settings/RolesAndPermission/RoleDetails/RoleDetails';
 import RolesAndPermission from './Components/Pages/Settings/RolesAndPermission/RolesAndPermission';
 import Taxes from "./Components/Pages/Settings/Taxes/Taxes";
 import Pipeline from "./Components/Controls/SettingsSection/PropertySettings/Buildings/Pipeline";
-import Lead from "./Components/Controls/SettingsSection/PropertySettings/Floors/Lead";
+import Lead from "./Components/Controls/SettingsSection/PropertySettings/Leads/Lead";
 import Hotels from "./Components/Controls/SettingsSection/PropertySettings/Teams/Teams";
 import Teams from "./Components/Controls/SettingsSection/PropertySettings/Teams/Teams";
+import Users from "./Components/Controls/SettingsSection/PropertySettings/Users/Users";
 
 function App() {
   const { i18n } = useTranslation();
@@ -141,7 +141,7 @@ function App() {
           element: <Pipeline />,
         },
         // { path: "generalSettings", element: <GeneralSettings /> },
-        { path: "users", element: <GeneralPage /> },
+        { path: "users", element: <Users/> },
         // { path: "propertySettings", element: <PropertySettings /> },
         { path: "activity log", element: <PropertyPage /> },
         // { path: "paymentSettings", element: <PaymentSettings /> },

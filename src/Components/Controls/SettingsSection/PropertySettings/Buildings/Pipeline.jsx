@@ -12,7 +12,7 @@ const Pipeline = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://tenant1.billiqa.com/api/pipelines?per_page=4`);
+        const response = await axios.get(`https://tenant1.billiqa.com/api/pipelines`);
         const pipelines = response.data.data.data;
         console.log(pipelines);
         

@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import BedType from "../../../Controls/SettingsSection/PropertySettings/BedType/BedType/BedType";
 import Buildings from "../../../Controls/SettingsSection/PropertySettings/Buildings/Pipeline";
-import Floors from "../../../Controls/SettingsSection/PropertySettings/Floors/Lead";
+import Floors from "../../../Controls/SettingsSection/PropertySettings/Leads/Lead";
 import RoomsSection from "../../../Controls/SettingsSection/PropertySettings/Rooms/RoomsSection";
 
 const PropertySettings = ({ activeTab, activeSubTab, setActiveTab,setActiveSubTab }) => {

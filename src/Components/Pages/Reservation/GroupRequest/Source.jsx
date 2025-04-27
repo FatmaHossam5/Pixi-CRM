@@ -27,17 +27,11 @@ const Source = () => {
     fetchData();
   }, []);
   const columnsConfig = [
-    // {
-    //   name: "ID",
-    //   selector: (row) => row?.id,
-    //   sortable: true,
-    //   // width: "100px",
-    //   visible: true
-    // },
+
     {
       name: "Source",
       selector: (row) => {
-        const imageUrl = row.image_url.startsWith('http') ? row.image_url : `https://${row.image_url}`
+        const imageUrl = row.image_url.startsWith('https') ? row.image_url : `https://${row.image_url}`
         return (
           <div className="d-flex align-items-center">
             <img src={imageUrl} alt="Source" style={{
@@ -54,20 +48,7 @@ const Source = () => {
       }
     }
 
-    // {
-    //   name: "Created At",
-    //   selector: (row) => new Date(row.created_at).toLocaleString(),
-    //   sortable: true,
-    //   width: "200px",
-    //   visible:true
-    // },
-    // {
-    //   name: "Updated At",
-    //   selector: (row) => new Date(row.updated_at).toLocaleString(),
-    //   sortable: true,
-    //   width: "200px",
 
-    // },
   ];
   const filterFn = (row) => row.name;
   return (
@@ -75,8 +56,8 @@ const Source = () => {
 
       <DynamicSectionForTabs
         data={data}
-        fetchData={() => setData(dummyData)} // Refetch dummy data if needed
-        createComponent={<CreateSource refetch={() => setData(dummyData)} />}
+        fetchData={() => setData(data)} // Refetch dummy data if needed
+        createComponent={<CreateSource refetch={() => setData(data)} />}
         translationKey="Source"
         columnsConfig={columnsConfig}
         filterFn={filterFn}
