@@ -5,9 +5,7 @@ import { useState } from "react";
 export const AuthContext = createContext({});
 
 export default function AuthContextProvider(props) {
-  // const baseUrlPms = "http://192.168.1.96:8005/pms";
-  const baseUrlPms = "http://192.168.1.96:8009/pms";
-  const baseUrlMis = "http://192.168.1.96:8009/mis";
+
   const base_url='https://tenant1.billiqa.com/api'
   let reqHeaders = `Token ${localStorage.getItem("userToken")}`;
   
@@ -45,9 +43,9 @@ export default function AuthContextProvider(props) {
   return (
     <AuthContext.Provider
       value={{
-        baseUrlPms,
+        
         reqHeaders,
-        baseUrlMis,
+        
         setDisabledBtn,
         disabledBtn,
         orgId,

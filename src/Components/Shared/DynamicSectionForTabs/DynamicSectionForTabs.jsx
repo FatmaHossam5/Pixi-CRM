@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AuthContext } from '../../Helpers/Context/AuthContext';
 import { ModalContext } from '../../Helpers/Context/ModalContext';
 import AddFormOffcanvas from '../AddFormOffcanvas/AddFormOffcanvas';
 import GeneralTable from '../GeneralTable/GeneralTable';
@@ -21,7 +20,6 @@ export default function DynamicSectionForTabs({
     console.log("📦 viewMode:", viewMode);
     console.log("📦 customContent:", customContent);
     const { t } = useTranslation();
-    const { baseUrlPms, Headers } = useContext(AuthContext);
     const { setShowState, showState } = useContext(ModalContext);
 
 
@@ -52,7 +50,7 @@ export default function DynamicSectionForTabs({
                     title={`${t('createNew')} ${t(translationKey)} `}
                     formComponent={component}
                 />
-              
+
             </div>
             {customPipelineDiv}
             <div className="tab-content" id="pills-tabContent">

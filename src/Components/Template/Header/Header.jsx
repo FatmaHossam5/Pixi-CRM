@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import userImage from '../../../assets/images/user2-160x160.jpg'
-import ProgressBar from "../../Shared/ProgressBar/ProgressBar";
 import TimeAndDate from "../../Shared/TimeAndDate/TimeAndDate";
 import PlayStopTimer from "../../Utlis/PlayStopTimer";
 const Header = ({ userName, userPhoto }) => {

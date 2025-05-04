@@ -8,7 +8,6 @@ import ToastContextProvider from "./Components/Helpers/Context/ToastContext .jsx
 
 import AuthContextProvider from "./Components/Helpers/Context/AuthContext.jsx";
 import ModalContextProvider from "./Components/Helpers/Context/ModalContext.jsx";
-import { TabsProvider } from "./Components/Helpers/Context/TabContext.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -16,9 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthContextProvider>
       <ModalContextProvider>
         <ToastContextProvider>
-          <TabsProvider>
           <App />
-          </TabsProvider>
         </ToastContextProvider>
       </ModalContextProvider>
     </AuthContextProvider>

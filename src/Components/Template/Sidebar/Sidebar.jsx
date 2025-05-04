@@ -1,8 +1,8 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 
 const SideBar = ({ collapsed, toggleSidebar }) => {
@@ -24,8 +24,7 @@ const SideBar = ({ collapsed, toggleSidebar }) => {
     { type: 'link', text: t("Tasks"), path: './tasks', icon: <i className="fa-thin fa-file-pen" /> },]
 
   const settings = [
-    // { type: 'link', text: t("Industries"), path: './industries', icon: <i className="fa-thin fa-suitcase" /> },
-    // { type: 'link', text: t("Service"), path: './service', icon: <i className="fa-kit fa-service-svg" /> },
+
     { type: 'link', text: t("Reasons"), path: './reasons', icon: <i className="fa-thin fa-clipboard-list" /> },
     { type: 'link', text: t("Source"), path: './source', icon: <i className="fa-kit fa-source-svg" /> },
     { type: 'link', text: t("Tasks Settings"), path: './tasks-settings', icon: <i className="fa-thin fa-diagram-subtask" /> },
@@ -34,9 +33,7 @@ const SideBar = ({ collapsed, toggleSidebar }) => {
     { type: 'link', text: t("Teams"), path: './teams', icon: <i className="fa-thin fa-users" /> },
     { type: 'link', text: t("Activity log"), path: './activity log', icon: <i className="fa-thin fa-clock" /> },
     { type: 'link', text: t("Custom field"), path: './custom field', icon: <i className="fa-thin fa-list-timeline" /> },
-    { type: 'link', text: t("reports"), path: './report', icon: <i className="fa-light fa-memo" /> },
-    { type: 'link', text: t("location"), path: './location', icon: <i className="fa-thin fa-location-dot" /> },
-    { type: 'link', text: t("Permissions"), path: './permissions', icon: <i className="fa-thin fa-shield-keyhole" /> },
+
   ]
 
 
