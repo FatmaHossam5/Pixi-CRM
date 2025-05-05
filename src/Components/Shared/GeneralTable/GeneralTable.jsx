@@ -126,7 +126,7 @@ console.log("📦 customContent:", customContent);
 
   // Filter data based on search and visible columns
   const filteredData = useMemo(() => {
-    return filteredRows.filter((row) =>
+    return filteredRows?.filter((row) =>
       visibleColumns
         .filter((col) => col.visible)
         .some((column) => {

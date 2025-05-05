@@ -1,73 +1,100 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import "react-phone-input-2/lib/style.css";
+import useSource from '../../../../Helpers/Hook/useSource';
+import useLocationData from '../../../../Helpers/Hook/useLocationData';
+import { Controller, useForm } from 'react-hook-form';
 
 
-export default function CreateContacts() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    address: "",
-    area_id: "",
-  });
-  const [imagePreview, setImagePreview] = useState(null);
+export default function CreateContacts({ refetch, initialData = {}, isEditMode = false }) {
+  // for image preview only
+  const [imagePreview, setImagePreview] = useState(initialData.image_url || null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
-  const baseUrl = 'https://tenant1.billiqa.com/api'
-  // Handle Image Upload
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setImagePreview(URL.createObjectURL(file));
+
+  const baseUrl = 'https://tenant1.billiqa.com/api';
+  const { source } = useSource();
+  const {
+    countries, cities, areas,
+    selectedCountry, setSelectedCountry,
+    selectedCity, setSelectedCity,
+    setSelectedArea
+  } = useLocationData();
+  console.log(cities);
+  
+  // React Hook Form setup
+  const {
+    register,
+    handleSubmit,
+    control,
+    setValue,
+    reset,
+    formState: { errors }
+  } = useForm({
+    defaultValues: {
+      name: initialData.name || '',
+      phone: initialData.phone || '',
+      email: initialData.email || '',
+      address: initialData.address || '',
+      source: initialData.source?.id ? String(initialData.source.id) : '',
+      area_id: initialData.area?.id ? String(initialData.area.id) : '',
     }
-  }
+  });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // If initialData changes (e.g. in edit-mode), reset the form:
+  // useEffect(() => {
+  //   reset({
+  //     name: initialData.name || '',
+  //     phone: initialData.phone || '',
+  //     email: initialData.email || '',
+  //     address: initialData.address || '',
+  //     source: initialData.source?.id ? String(initialData.source.id) : '',
+  //     area_id: initialData.area?.id ? String(initialData.area.id) : '',
+  //   });
+  //   setImagePreview(initialData.image_url || null);
+  // }, [initialData, reset]);
 
-  const handlePhoneChange = (value,country) => {
-    setFormData({ ...formData,   phone: `+${value}` });
-  };
-
-  // Handle Submit - API Call
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async data => {
     setLoading(true);
     setError(null);
     setSuccessMessage(null);
 
     try {
-      const response = await axios.post(`${baseUrl}/clients`, formData);
+      // If you need to include an uploaded file, switch to FormData here
+      const payload = { ...data };
 
-      if (response.data) {
-        setSuccessMessage("Client created successfully!");
-        console.log(formData);
+      await axios.post(`${baseUrl}/clients`, payload);
 
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          address: "",
-          area_id: "",
-        });
+      setSuccessMessage(isEditMode ? 'Client updated!' : 'Client created!');
+      refetch();
+
+      if (!isEditMode) {
+        reset({ name: '', phone: '', email: '', address: '', source: '', area_id: '' });
+        setSelectedCountry(null);
+        setSelectedCity(null);
+        setSelectedArea(null);
+        setImagePreview(null);
       }
-      console.log(formData);
-
-    } catch (err) {
-      console.log(formData);
-      setError("Failed to create client. Please try again.");
+    } catch {
+      setError('Failed to save client. Please try again.');
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
+
+  // image handler stays the same
+  const handleImageChange = e => {
+    const file = e.target.files[0];
+    if (file) setImagePreview(URL.createObjectURL(file));
+  };
+
   return (
     <div>
-      <form onSubmit={handleSubmit} className='py-4'>
+      <form onSubmit={handleSubmit(onSubmit)} className='py-4'>
+        {/* Image Preview */}
 
         <div className="text-center my-3">
           <div
@@ -106,96 +133,189 @@ export default function CreateContacts() {
           <label htmlFor="uploadImage" className="btn btn-outline-secondary py-2" style={{ width: "240px" }}>Upload Image</label>
         </div>
         <div>
+          {/* Name */}
+
           <div className="form-group">
             <label htmlFor="userName">User Name</label>
-            <input type="text" className="form-control" id="userName" placeholder="Enter Name" style={{ height: "48px047" }} name="name" value={formData.name} onChange={handleChange} required />
+            <input
+              {...register('name', { required: true })}
+              type="text"
+              className="form-control"
+              placeholder="Enter Name"
+              style={{ height: '48px' }}
+            />
+            {errors.name && <small className="text-danger">Name is required.</small>}
           </div>
-        
+          {/* Phone (Controller) */}
+
           <div>
             <div className="my-3 d-flex flex-column justify-content-between col-12">
               <label htmlFor="">Phone Number</label>
-              <div className="row">
-                <div className=" col-3 flag-container">
-                  <PhoneInput
-                    country={"eg"}
-                    value={formData.phone}
-                    onChange={handlePhoneChange}
-                    containerClass=""
-                    buttonClass="btn btn-light border-end-0 p-2"
-                    inputClass="form-control border-0"
-                    placeholder="Enter Phone Number"
-                  />
-                </div>
-                <div className='col-9'>
-                  <input type="text" name="phone" className="form-control" value={formData.phone} onChange={handleChange} required />
-                </div>
-              </div>
-            </div>
-            <div className="form-group mb-3">
-            <label htmlFor="email">Email</label>
-            <input type="text" className="form-control" id="email" placeholder="Enter Name" style={{ height: "48px047" }} name="email" value={formData.email} onChange={handleChange} required />
-          </div>
-            <div className="mb-3">
-              <label className="form-label">Source</label>
-              <select
-                name="source"
-                value={formData.source}
-                onChange={handleChange}
-                className="form-select"
-                style={{
-                  backgroundColor: "#f8f9fa", // Light gray background
-                  border: "1px solid #ddd", // Soft border
-                  borderRadius: "2px", // Rounded corners
-                  padding: "8px",
-                }}
-              >
-                <option value="">Select Source</option>
-                <option value="friend">Friend</option>
-                <option value="social">Social Media</option>
-                <option value="advertisement">Advertisement</option>
-              </select>
-            </div>
-            <div className="mb-3">
-              <label className="form-label">City</label>
-              <select
-                name="area_id"
-                value={formData.area_id}
-                onChange={handleChange}
-                className="form-select"
-                style={{
-                  backgroundColor: "#f8f9fa", // Light gray background
-                  border: "1px solid #ddd", // Soft border
-                  borderRadius: "2px", // Rounded corners
-                  padding: "8px",
-                }}
-              >
-                <option value="">Select City</option>
-                <option value="10">City 5</option>
-                <option value="9">City 6</option>
-                <option value="8">City 7</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="Address">Address</label>
-              <input type="text" className="form-control" name="address" id="Address" placeholder="Enter Address" style={{ height: "48px047" }} value={formData.address} onChange={handleChange} />
-            </div>
-            <div className='d-flex justify-content-end mt-4 '>
-              <div className='mt-3 mx-3'>
-                <button type="submit" className="btn btn-outline-primary px-5" onClick={() => setFormData({ name: "", phone: "", email: "", address: "", area_id: "" })}> clear</button>
-              </div>
-              <div className="text-center mt-3 ">
-                <button type="submit" className="btn btn-primary px-5"> Create</button>
-              </div>
 
+              <Controller
+                name="phone"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <div className="row">
+                    <div className="col-3 flag-container">
+                      {/* react-phone-input-2 */}
+                      <PhoneInput
+                        country="eg"
+                        value={field.value}
+                        onChange={field.onChange}
+                        containerClass=""
+                        buttonClass="btn btn-light border-end-0 p-2"
+                        inputClass="form-control border-0"
+                        placeholder="Enter Phone Number"
+                      />
+                    </div>
+                    <div className="col-9">
+                      {/* mirror in a normal text input if you really need it */}
+                      <input
+                        type="text"
+                        className="form-control"
+                        {...field}
+                        required
+                      />
+                    </div>
+                  </div>
+                )}
+              />
+              {errors.phone && (
+                <small className="text-danger">Phone is required.</small>
+              )}
             </div>
+          </div>
+          {/* Email */}
+
+          <div className="form-group mb-3">
+            <label htmlFor="email">Email</label>
+            <input
+              {...register('email', { required: true })}
+              type="email"
+              className="form-control"
+              placeholder="Enter Email"
+              style={{ height: '48px' }}
+            />
+            {errors.email && <small className="text-danger">Valid email is required.</small>}          </div>
+          {/* Source select */}
+          <div className="mb-3">
+            <label className="form-label">Source</label>
+            <select
+              {...register('source', { required: true })}
+              className="form-select"
+              style={{ backgroundColor: '#f8f9fa', border: '1px solid #ddd', borderRadius: '2px', padding: '8px' }}
+            >
+              <option value="">Select Source</option>
+              {source.map(s => (
+                <option key={s.id} value={s.id}>{s.name}</option>
+              ))}
+            </select>
+            {errors.source && <small className="text-danger">Source is required.</small>}
+          </div>
+
+          {/* City/Area select */}
+          <div className="mb-3">
+            <label className="form-label">Country</label>
+            <select
+              className="form-select mb-2"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #ddd",
+                borderRadius: "2px",
+                padding: "8px",
+              }}
+              value={selectedCountry || ''}
+              onChange={e => {
+                const c = e?.target?.value;
+                setSelectedCountry(c);
+                setSelectedCity(null);
+                setValue('area_id', '');
+              }}
+            >
+              <option value="">Select Country</option>
+              {countries.map(c => (
+                <option key={c.id} value={c.id}>{c?.title}</option>
+              ))}
+            </select>
+
+            <label className="form-label">City</label>
+            <select
+              className="form-select mb-2"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #ddd",
+                borderRadius: "2px",
+                padding: "8px",
+              }}
+              value={selectedCity || ''}
+              onChange={e => {
+                const ct = e.target.value;
+                setSelectedCity(ct);
+                setValue('area_id', '');
+              }}
+              disabled={!selectedCountry}
+            >
+              <option value="">Select City</option>
+              {cities.map(c => (
+                <option key={c.id} value={c.id}>{c?.title}</option>
+              ))}
+            </select>
+
+            <label className="form-label">Area</label>
+            <select
+              {...register('area_id', { required: true })}
+              className="form-select"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #ddd",
+                borderRadius: "2px",
+                padding: "8px",
+              }}
+              disabled={!selectedCity}
+            >
+              <option value="">Select Area</option>
+              {areas.map(a => (
+                <option key={a.id} value={a.id}>{a.title}</option>
+              ))}
+            </select>
+            {errors.area_id && <small className="text-danger">Area is required.</small>}
+          </div>
+
+
+
+          {/* Address */}
+          <div className="form-group mb-3">
+            <label>Address</label>
+            <input
+              {...register('address')}
+              type="text"
+              className="form-control"
+              placeholder="Enter Address"
+              style={{ height: '48px' }}
+            />
+          </div>
+          <div className='d-flex justify-content-end mt-4 '>
+            <div className='mt-3 mx-3'>
+              <button type="submit" className="btn btn-outline-primary px-5" onClick={() => {
+                reset({ name: '', phone: '', email: '', address: '', source: '', area_id: '' });
+                setImagePreview(null);
+              }}> clear</button>
+            </div>
+            <div className="text-center mt-3 ">
+              <button type="submit" className="btn btn-primary px-5" disabled={loading}>           {isEditMode ? 'Update' : 'Create'}
+              </button>
+            </div>
+
           </div>
         </div>
+        {/* Feedback */}
         {error && <div className="alert alert-danger mt-3">{error}</div>}
         {successMessage && <div className="alert alert-success mt-3">{successMessage}</div>}
-      </form>
-
-
+      </form >
 
     </div>
+
   )
 }

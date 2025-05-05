@@ -86,20 +86,45 @@ const Contacts = () => {
       // width: "250px",
       visible: true
     },
-    // {
-    //   name: "Created At",
-    //   selector: (row) => new Date(row.created_at).toLocaleString(),
-    //   sortable: true,
-    //   width: "200px",
-    //   visible:true
-    // },
-    // {
-    //   name: "Updated At",
-    //   selector: (row) => new Date(row.updated_at).toLocaleString(),
-    //   sortable: true,
-    //   width: "200px",
+    {
+      name: "Area",
+      selector: (row) => row.area?.title || "-",
+      sortable: true,
+      visible: true,
+    },
+    {
+      name: "Source",
+      // if you just want the name (for sorting/filtering):
+      selector: (row) => row.source?.name || "-",
+      sortable: true,
+      visible: true,
+      // custom cell to show image + name
+      cell: (row) =>
+        row.source ? (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={
+                // prepend protocol if not included
+                row.source.image_url.startsWith("http")
+                  ? row.source.image_url
+                  : `https://${row.source.image_url}`
+              }
+              alt={row.source.name}
+              style={{
+                width: 32,
+                height: 32,
+                objectFit: "cover",
+                borderRadius: "50%",
+                marginRight: 8,
+              }}
+            />
+            <span>{row.source.name}</span>
+          </div>
+        ) : (
+          "-"
+        ),
+    },
 
-    // },
   ];
 
 
@@ -109,7 +134,6 @@ const Contacts = () => {
   const filterFn = (row) => row.name;
 
 
-  console.log(filterFn);
 
 
   return (
