@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function createTasksSettings() {
+export default function CreateTasksSettings() {
   return (
-    <div>createTasksSettings</div>
+    <div>C</div>
   )
 }

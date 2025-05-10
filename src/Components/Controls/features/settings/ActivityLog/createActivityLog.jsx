@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function createActivityLog() {
+export default function CreateActivityLog() {
   return (
     <div>createActivityLog</div>
   )

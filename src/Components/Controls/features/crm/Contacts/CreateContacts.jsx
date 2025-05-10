@@ -1,14 +1,14 @@
 import axios from 'axios';
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
 import "react-phone-input-2/lib/style.css";
-import useSource from '../../../../Helpers/Hook/useSource';
+import { toast } from "react-toastify";
 import useLocationData from '../../../../Helpers/Hook/useLocationData';
-import { Controller, useForm } from 'react-hook-form';
+import useSource from '../../../../Helpers/Hook/useSource';
 
 
-export default function CreateContacts({ refetch, initialData = {}, isEditMode = false }) {
+export default function CreateContacts({ refetch, initialData = {}, isEditMode = false, handleClose }) {
   // for image preview only
   const [imagePreview, setImagePreview] = useState(initialData.image_url || null);
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function CreateContacts({ refetch, initialData = {}, isEditMode =
     setSelectedArea
   } = useLocationData();
   console.log(cities);
-  
+
   // React Hook Form setup
   const {
     register,
@@ -44,18 +44,6 @@ export default function CreateContacts({ refetch, initialData = {}, isEditMode =
     }
   });
 
-  // If initialData changes (e.g. in edit-mode), reset the form:
-  // useEffect(() => {
-  //   reset({
-  //     name: initialData.name || '',
-  //     phone: initialData.phone || '',
-  //     email: initialData.email || '',
-  //     address: initialData.address || '',
-  //     source: initialData.source?.id ? String(initialData.source.id) : '',
-  //     area_id: initialData.area?.id ? String(initialData.area.id) : '',
-  //   });
-  //   setImagePreview(initialData.image_url || null);
-  // }, [initialData, reset]);
 
   const onSubmit = async data => {
     setLoading(true);
@@ -68,8 +56,11 @@ export default function CreateContacts({ refetch, initialData = {}, isEditMode =
 
       await axios.post(`${baseUrl}/clients`, payload);
 
-      setSuccessMessage(isEditMode ? 'Client updated!' : 'Client created!');
+
+      toast.success(isEditMode ? "Client updated!" : "Client created!");
       refetch();
+
+      handleClose();
 
       if (!isEditMode) {
         reset({ name: '', phone: '', email: '', address: '', source: '', area_id: '' });
@@ -80,6 +71,7 @@ export default function CreateContacts({ refetch, initialData = {}, isEditMode =
       }
     } catch {
       setError('Failed to save client. Please try again.');
+      toast.error('Failed to save client. Please try again.');
     } finally {
       setLoading(false);
     }

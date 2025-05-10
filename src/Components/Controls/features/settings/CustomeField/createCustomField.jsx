@@ -1,7 +1,11 @@
 import React from 'react'
+import DynamicSectionForTabs from '../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs'
 
-export default function createCustomField() {
+export default function CreateCustomField() {
+
+
   return (
-    <div>createCustomField</div>
+   
+  <></>
   )
 }

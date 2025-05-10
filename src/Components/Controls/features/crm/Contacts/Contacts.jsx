@@ -62,7 +62,7 @@ const Contacts = () => {
     };
 
     fetchData();
-  }, []);
+  }, [data]);
 
   const columnsConfig = [
     {
@@ -118,7 +118,7 @@ const Contacts = () => {
                 marginRight: 8,
               }}
             />
-            <span>{row.source.name}</span>
+            <span>{row?.source?.name}</span>
           </div>
         ) : (
           "-"

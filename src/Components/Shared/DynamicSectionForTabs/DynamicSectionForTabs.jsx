@@ -14,27 +14,27 @@ export default function DynamicSectionForTabs({
     extraHeaderControls,
     viewMode,
     customContent,
-    customPipelineDiv
+    customPipelineDiv,
+    customBreadcrumbs,
 
 }) {
-    console.log("📦 viewMode:", viewMode);
-    console.log("📦 customContent:", customContent);
+   
     const { t } = useTranslation();
     const { setShowState, showState } = useContext(ModalContext);
 
+    const handleClose = () => setShowState(null);
 
-    console.log(data);
 
     const handleShowAdd = () => {
         setShowState(translationKey);
     };
-    const component = React.cloneElement(createComponent, { refetch: fetchData });
+    const component = React.cloneElement(createComponent, { refetch: fetchData, handleClose, });
 
 
-    const filteredRows = data?.filter(filterFn);
+    const filteredRows = data?.filter(filterFn || (() => true));
 
     return (
-        <div className="px-card">
+        <div className="px-card ">
             <div className="card-head d-flex pt-4 px-5 align-items-center">
                 <h3 className="mb-0 px-sub-taps w-50 me-auto">{t(translationKey)}</h3>
                 <button onClick={handleShowAdd} className="px-btn px-blue-btn ms-3">
@@ -46,7 +46,7 @@ export default function DynamicSectionForTabs({
                 <AddFormOffcanvas
                     name={translationKey}
                     showState={showState}
-                    handleClose={() => setShowState(null)}
+                    handleClose={handleClose}
                     title={`${t('createNew')} ${t(translationKey)} `}
                     formComponent={component}
                 />

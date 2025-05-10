@@ -16,6 +16,9 @@ import Users from "./Components/Controls/features/settings/Users/Users";
 import AuthLayout from "./Components/Template/AuthLayout/AuthLayout";
 import MasterLayout from "./Components/Template/MasterLayout/MasterLayout";
 import Dashboard from "./Components/Controls/features/crm/Dashboard/Dashboard";
+import "react-toastify/dist/ReactToastify.css";
+import AllBusiness from "./Components/Controls/landlord/AllBusiness/AllBusiness";
+
 
 function App() {
   const { i18n } = useTranslation();
@@ -74,6 +77,17 @@ function App() {
         { path: "teams", element: <Team /> },
         { path: "activity log", element: <ActivityLog /> },
         { path: "custom field", element: <CustomField /> },
+      ],
+    },
+    {
+      path: "super-admin",
+      element: (
+        <MasterLayout />
+      ),
+      children: [
+        { index: true, element: <AllBusiness /> },
+        { path: "business", element: <AllBusiness /> },
+     
       ],
     },
   ]);
