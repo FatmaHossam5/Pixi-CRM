@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
     "@xyflow/react": "^12.4.3",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
@@ -35,7 +36,7 @@
     "react-dom": "^18.3.1",
     "react-flags-select": "^2.2.3",
     "react-flatpickr": "^3.10.13",
-    "react-hook-form": "^7.52.1",
+    "react-hook-form": "^7.56.3",
     "react-i18next": "^15.1.0",
     "react-multi-select-component": "^4.3.4",
     "react-otp-input": "^3.1.1",
@@ -46,6 +47,7 @@
     "react-select": "^5.10.1",
     "react-toastify": "^10.0.6",
     "xlsx": "^0.18.5",
+    "yup": "^1.6.1",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

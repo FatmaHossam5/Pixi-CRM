@@ -18,3 +18,4 @@ try:
         print('Caps Lock OFF')
 except KeyboardInterrupt:
     print("Program stopped manually.")
+    

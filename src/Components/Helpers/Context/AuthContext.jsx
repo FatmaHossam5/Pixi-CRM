@@ -1,71 +1,37 @@
-/* eslint-disable react/prop-types */
-import { createContext } from "react";
-import { useState } from "react";
+import React, { createContext, useState } from 'react';
+import api from '../../Utlis/api';
+import { useNavigate } from 'react-router-dom';
+export const AuthContext = createContext();
+export const AuthProvider = ({ children }) => { 
+      const [user, setUser] = useState(null);
+      
+ const login = async (identifier, password) => {
+    try {
+      const response = await api.post('/login', { identifier, password });
+console.log(response);
 
-export const AuthContext = createContext({});
+      if (response.data && response.data.data.token) {
+        setUser(response?.data?.data?.user?.name);
+        localStorage.setItem('token', response?.data?.data?.token);
+        return true;
+      }
 
-export default function AuthContextProvider(props) {
-
-  const base_url='https://tenant1.billiqa.com/api'
-  let reqHeaders = `Token ${localStorage.getItem("userToken")}`;
-  
-  const [disabledBtn, setDisabledBtn] = useState(true);
-  const orgId = localStorage.getItem("organization_id");
- 
-  
-  const userId = localStorage.getItem("userId");
- 
-  
-  const admin = localStorage.getItem("userName");
-
-  
-  const [isLoading, setIsLoading] = useState(false);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [arrayOfWeekends, setArrayOfWeekends] = useState([]);
-  const [language, setLanguage] = useState(localStorage.getItem("language") || "en"); // Default to English
-
-  const Headers = {
-    Authorization: reqHeaders,
-    AgencyUsername: "Pixi_company",
-    AgencyPassword: "pbkdf2_sha256$720000$W7JHRlVMe4NBq6kuVE6tsc$h90kUho8jlPX0Ji6kx16biMGiSmIwblznXpkHmRLW04=",
-    AgencyToken: "GGVkPCIA8QlqiwhgCGtiulaaB0sg98QLJNaKj5v",
-
+      return false;
+    } catch (error) {
+      console.error('Login error:', error);
+      return false;
+    }
   };
-  const changeLanguage = (lng) => {
-    setLanguage(lng);
-    localStorage.setItem("language", lng); // Persist language in localStorage
-    document.documentElement.setAttribute("lang", lng);
-    document.documentElement.setAttribute("dir", lng === "ar" ? "rtl" : "ltr");
+  
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('token');
+            
   };
-
-   let activeLang = localStorage.getItem("language")
-
-  return (
-    <AuthContext.Provider
-      value={{
-        
-        reqHeaders,
-        
-        setDisabledBtn,
-        disabledBtn,
-        orgId,
-        isLoading,
-        setIsLoading,
-        Headers,
-        userId,
-        setIsDisabled,
-        isDisabled,
-        admin,
-        setArrayOfWeekends,
-        arrayOfWeekends,
-        changeLanguage,
-        language,
-        activeLang,
-        base_url
-
-      }}
-    >
-      {props.children}
+   return (
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
     </AuthContext.Provider>
   );
-}
+};

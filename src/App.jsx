@@ -18,6 +18,7 @@ import MasterLayout from "./Components/Template/MasterLayout/MasterLayout";
 import Dashboard from "./Components/Controls/features/crm/Dashboard/Dashboard";
 import "react-toastify/dist/ReactToastify.css";
 import AllBusiness from "./Components/Controls/landlord/AllBusiness/AllBusiness";
+import Login from "./Components/Controls/Auth/Login/Login";
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
       path: "/",
       element: <AuthLayout />,
       children: [
-        { index: true, element: <Contacts /> },
+        { index: true, element: <Login/> },
 
       ],
     },

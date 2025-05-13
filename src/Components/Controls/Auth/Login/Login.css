@@ -1,0 +1,75 @@
+.login-wrapper {
+  background: url('../../../../assets/images/background.png') ;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card {
+  background-color: white;
+  padding: 2rem;
+  width: 502px;
+  height: 455px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 0.25rem;
+}
+
+.login-card p {
+  margin-bottom: 1.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 15px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.login-options a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: not-allowed; /* Change this when login is enabled */
+}

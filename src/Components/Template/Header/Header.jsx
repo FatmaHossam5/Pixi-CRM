@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import userImage from '../../../assets/images/user2-160x160.jpg'
 import TimeAndDate from "../../Shared/TimeAndDate/TimeAndDate";
 import PlayStopTimer from "../../Utlis/PlayStopTimer";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 const Header = ({ userName, userPhoto }) => {
   const { t, i18n } = useTranslation();
 
@@ -31,7 +32,7 @@ const Header = ({ userName, userPhoto }) => {
                 aria-expanded="false"
               >
                 <h3 className="m-0 px-main-color-blue" style={{ color: '#1877F2' }}>
-                  {t("Hi")} ,{userName}
+                  {t("Hi")} ,{userName} <ThemeToggle />
                 </h3>
               </button>
 
