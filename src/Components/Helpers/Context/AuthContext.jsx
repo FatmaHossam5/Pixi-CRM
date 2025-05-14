@@ -3,16 +3,21 @@ import api from '../../Utlis/api';
 import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => { 
-      const [user, setUser] = useState(null);
+      const [user, setUser] = useState(() => {
+        const storedUser = localStorage.getItem("user");
+        return storedUser ? JSON.parse(storedUser) : null;
+      });
+      ;
       
  const login = async (identifier, password) => {
     try {
       const response = await api.post('/login', { identifier, password });
-console.log(response);
 
       if (response.data && response.data.data.token) {
-        setUser(response?.data?.data?.user?.name);
+        setUser(response?.data?.data?.user);
         localStorage.setItem('token', response?.data?.data?.token);
+        localStorage.setItem("user", JSON.stringify(response?.data?.data?.user));
+
         return true;
       }
 
@@ -27,6 +32,8 @@ console.log(response);
   const logout = () => {
     setUser(null);
     localStorage.removeItem('token');
+    localStorage.removeItem("user");
+
             
   };
    return (

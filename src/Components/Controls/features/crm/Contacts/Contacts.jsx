@@ -47,13 +47,11 @@ const Contacts = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`https://tenant1.billiqa.com/api/clients?per_page=4`, { headers: Headers });
-        console.log(response);
 
         if (response.data.status) {
 
           // Assuming API returns an array of clients inside response.data.data.data
           setData(response.data.data.data);
-          console.log(data);
 
         }
       } catch (error) {

@@ -11,8 +11,6 @@ const GeneralTable = ({ filteredRows, columns,extraHeaderControls,  customConten
   const [selectAll, setSelectAll] = useState(false);
   const [selectedRows, setSelectedRows] = useState([]);
   const [toggleCleared, setToggleCleared] = useState(false);
-  console.log("📦 viewMode:", viewMode);
-console.log("📦 customContent:", customContent);
   // Download CSV function
   const downloadCSV = (data) => {
     const csvRows = [];

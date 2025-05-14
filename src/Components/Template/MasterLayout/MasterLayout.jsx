@@ -1,8 +1,9 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../Header/Header";
 import SideBar from "./../Sidebar/Sidebar";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../../Helpers/Context/AuthContext";
 
 
 
@@ -10,6 +11,7 @@ function MasterLayout() {
   const location = useLocation();
   const { i18n } = useTranslation();  // Access i18n instance to get the current language
   const [collapsed, setCollapsed] = useState(false);
+  const{user}=useContext(AuthContext)
   const loggedInUser = {
     name: 'Ashraf Galal',
     photo: 'https://example.com/path/to/ashraf-photo.jpg',
@@ -22,13 +24,13 @@ function MasterLayout() {
   const isRTL = i18n.language === 'ar';
   return (
     <>
-      <div className={`container-fluid main-content-container d-flex `} >
+      <div className={` main-content-container d-flex `} >
 
         <div
-          className={`main-sidebar-container  d-flex `}
+          className={`  d-flex `}
 
         >
-          <SideBar collapsed={collapsed} toggleSidebar={toggleSidebar} />
+          <SideBar collapsed={collapsed} toggleSidebar={toggleSidebar}  role={user?.roles}/>
         </div>
         <div
           className="main-header-container"
