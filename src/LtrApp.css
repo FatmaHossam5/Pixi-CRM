@@ -95,14 +95,6 @@ body::-webkit-scrollbar-thumb {
   padding: 0px !important;
 }
 
-.main-content-container {
-  background-color: #F8F8F8;
-  padding-top: 48px !important;
-  padding-right: 24px !important;
-  padding-left: 24px !important;
-  min-height: 100vh !important;
-  overflow: hidden !important;
-}
 
 
 
@@ -119,23 +111,12 @@ body::-webkit-scrollbar-thumb {
   margin-left: 10px;
 }
 
-.main-sidebar-container {
-  margin-right: 24px !important;
 
 
-}
 
-.main-header-container {
-  margin-left: 23px !important;
-  padding: 2px;
-}
 
-.content {
-  padding: 2px;
-}
 
 /*End of MasterLayout Component Classes*/
-/*SideBar Component Classes*/
 
 
 
@@ -264,11 +245,7 @@ li.active-tab .side-link svg path {
   stroke: #1877F2 !important;
 }
 
-.px-scroll-tabs .nav-item:first-child .nav-link {
-  margin-inline-start: 13px;
-}
 
-/*End of SideBar Component Classes*/
 
 /*Bulk Actions Classes*/
 .btn i.fa-add {
@@ -289,11 +266,11 @@ li.active-tab .side-link svg path {
   text-decoration: underline !important;
 }
 
-.px-card {
+/* .px-card {
   background-color: var(--px-color-white);
   border-radius: 10px;
   box-shadow: var(--px-sharp-shadow);
-}
+} */
 
 .px-form-input,
 .px-text-area {
@@ -588,26 +565,7 @@ input[type="file"].custom-upload-input {
   border-radius: 5px;
 }
 
-.separetor {
-  width: 100%;
-  height: 2px;
-  background-color: var(--px-separetor-color);
-  /* position: absolute; */
-}
-
-.vertical-separetor {
-  position: relative;
-}
-
-.vertical-separetor::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  background-color: var(--px-separetor-color);
-  top: 2px;
-  bottom: 2px;
-  right: -1px;
-}
+/*  */
 
 .absolute {
   position: absolute;
@@ -642,9 +600,6 @@ input[type="file"].custom-upload-input {
   height: 0;
 }
 
-.px-scroll-tabs .nav-item {
-  min-width: fit-content !important;
-}
 
 .px-scroll-tabs .active {
   background-color: var(--px-color-white) !important;
@@ -652,11 +607,7 @@ input[type="file"].custom-upload-input {
   position: relative;
 }
 
-.px-scroll-tabs .nav .nav-item .active {
-  background-color: var(--px-color-white) !important;
-  color: black !important;
-  position: relative;
-}
+
 
 .px-scroll-tabs .active::after {
   content: "";
@@ -669,12 +620,7 @@ input[type="file"].custom-upload-input {
   border-radius: 7px 7px 0px 0px;
 }
 
-.px-scroll-tabs .nav .nav-item .active::after {
-  content: "";
-  height: 6px;
-  position: absolute;
-  text-align: start;
-}
+
 
 .px-scroll-tabs .nav-link {
   color: black;
@@ -1325,32 +1271,12 @@ input[type="file"].custom-upload-input {
 }
 
 /* start main content */
-/* start sidebar */
-/* .sidebar {
-  font-size: 16px;
-  height: 100vh;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 
-} */
 
-/* .sidebar::-webkit-scrollbar {
-  display: none;
-  width: 5px;
-} */
 
-/* .sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(215, 215, 215, 0.301);
-  border-radius: 10px;
-  margin-top: 50px;
-} */
 
-.logo {
-  color: var(--px-main-color-blue);
-  /* padding-block: 20px; */
-  font-size: 2rem;
-  font-weight: 600;
-  /* letter-spacing: 13px; */
-}
+
+
 
 .side-label {
   color: var(--px-input-placeholder-color);
@@ -1366,26 +1292,11 @@ input[type="file"].custom-upload-input {
   font-size: 23px !important;
 }
 
-/* .active-side-link {
-  color: var(--px-main-color-blue) !important;
-  box-shadow: none !important;
-} */
 
-.active-side-link .icon path,
-.active-side-link .icon circle {
-  stroke: var(--px-main-color-blue) !important;
-}
 
-/* .active-side-link::after {
-  content: "";
-  height: 100%;
-  width: 2%;
-  position: absolute;
-  background-color: var(--px-main-color-blue) !important;
-  top: 0;
-  right: -16px;
-  border-radius: 5px 0px 0px 5px;
-} */
+
+
+
 
 .side-drop-down .accordion-button::after {
   transform: rotate(0deg);
@@ -1477,19 +1388,9 @@ input[type="file"].custom-upload-input {
   transition: width 0.3s ease-in-out;
 }
 
-/* end sidebar */
 /* start header */
 
-header {
-  padding-top: 25px;
-  background-color: var(--px-main-bg-color);
-}
 
-.collaps-btn {
-  font-size: 2rem;
-  color: var(--px-main-color-blue);
-  cursor: pointer;
-}
 
 .header-search {
   height: fit-content;
@@ -1593,11 +1494,6 @@ header {
   font-size: 18px;
   color: var(--px-gray-bg-color);
 }
-/* 
-.collaps-active-side-links {
-  height: 100vh;
-  transition: all .3s ease-in-out;
-} */
 
 .mobile-side-head {
   background-color: var(--px-light-blue);
@@ -1642,11 +1538,7 @@ header {
   display: none !important;
 }
 
-@media screen and (max-width:992px) {
-  .left-side-links {
-    width: 40%;
-  }
-}
+
 
 /* end header */
 /* start content */
@@ -1995,26 +1887,7 @@ footer a {
 
 
 /* start geo locations */
-.px-geo-location .nav-pills .nav-item .nav-link {
-  color: var(--px-gray-bg-color);
-  background-color: var(--px-main-bg-color);
-  position: relative;
-}
 
-.px-geo-location .nav-pills .nav-item .active {
-  color: var(--px-main-color-blue);
-  background-color: var(--px-main-bg-color);
-  position: relative;
-}
-
-.px-geo-location .nav-pills .nav-item .active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  right: 10%;
-  border-top: 1px solid var(--px-main-color-blue);
-}
 
 .right-icon {
   font-size: 12px;
@@ -2162,11 +2035,7 @@ footer a {
 
 /* end dashboard */
 /* start reservation */
-@media screen and (max-width:1400px) {
-  .vertical-separetor::after {
-    display: none;
-  }
-}
+
 
 /* end reservation */
 /*start folio reservation */
@@ -2469,66 +2338,15 @@ input:checked+.slider:before {
 }
 
 /* end filter */
-/* test react pro sidebar */
-.ps-sidebar-container-test-id .ps-menu-root {
-  background-color: #fff;
-  border-radius: 1rem;
-}
-
-.side-container .css-1wvake5 {
-  border-right-style: none !important;
-}
-
-.side-container .ps-sidebar-root {
-  background-color: #ffffff !important;
-  border-radius: 1.5rem !important;
-  margin: 1rem 0;
-  border: 1px solid #e4e6eb !important;
-  /* border-right: 1px solid #e4e6eb ; */
-  height: 95vh;
-  width: 100%;
-}
-
-/* Hide the scrollbar but still allow scrolling */
-.side-container .ps-sidebar-root .css-dip3t8 {
-  background-color: #ffffff !important;
-  border-radius: 1.5rem !important;
-  overflow-y: scroll !important;
-  /* Enable vertical scrolling */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.side-container .ps-sidebar-root .css-dip3t8::-webkit-scrollbar {
-  display: none;
-}
 
 
-.side-container {
-  overflow: hidden;
-  /* Hide overflow */
-}
 
-.side-container .ps-sidebar-root .ps-sidebar-container {
-  overflow-y: auto;
-  /* Allow vertical scrolling if needed */
-  max-height: 100vh;
-  /* Ensure it doesn't exceed the viewport height */
-  /* background-color: #17C653; */
-}
 
-.ps-sidebar-container-test-id .ps-menu-root {
-  overflow: hidden;
-  /* Hide overflow for submenu */
-}
 
-.ps-sidebar-container-test-id .ps-menu-root .ps-open {
-  overflow: hidden !important;
-  /* Ensure no overflow when open */
-}
+
+
+
+
 
 .kOrdYE span.__rdt_custom_sort_icon__ i,
 .kOrdYE span.__rdt_custom_sort_icon__ svg {
@@ -3428,10 +3246,6 @@ input[type="file"].custom-upload-input {
   padding: 14px;
 }
 
-/* .active-side-link {
-  background-color: #e7f3ff;
-  color: #007bff;
-} */
 
 .side-container,
 .side-links {
@@ -3481,19 +3295,6 @@ input[type="file"].custom-upload-input {
 
 /* End Update CSS */
 
-
-/* 
-.Settingssidebar {
-  transition: all 0.3s ease-in-out !important; 
-  width: 0; 
-  opacity: 0; 
-  overflow: hidden; 
-}
-
-.Settingssidebar.expanded {
-  width: 275px;
-  opacity: 1; 
-} */
 
 /* Start Update New Table CSS  */
 .table-actions {
@@ -3624,9 +3425,7 @@ input[type="file"].custom-upload-input {
 
 
 /* When not playing, show the play icon by default */
-/* .play-icon {
-  opacity: 1;
-} */
+
 
 /* .is-playing class toggles icons */
 .timer-btn .play-icon {

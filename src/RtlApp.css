@@ -100,11 +100,11 @@ body::-webkit-scrollbar-thumb {
   text-decoration: underline !important;
 }
 
-.px-card {
+/* .px-card {
   background-color: var(--px-color-white);
   border-radius: 10px;
   box-shadow: var(--px-sharp-shadow);
-}
+} */
 
 .px-form-input,
 .px-text-area {
@@ -392,26 +392,7 @@ input[type="file"].custom-upload-input {
   border-radius: 5px;
 }
 
-.separetor {
-  width: 100%;
-  height: 2px;
-  background-color: var(--px-separetor-color);
-  /* position: absolute; */
-}
 
-.vertical-separetor {
-  position: relative;
-}
-
-.vertical-separetor::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  background-color: var(--px-separetor-color);
-  top: 0;
-  bottom: 0;
-  left: -1px;
-}
 
 .absolute {
   position: absolute;
@@ -435,17 +416,9 @@ input[type="file"].custom-upload-input {
   z-index: 100;
 }
 
-.px-taps .active {
-  background-color: var(--px-color-white) !important;
-  color: black !important;
-  position: relative;
-}
 
-.px-taps .nav .nav-item .active {
-  background-color: var(--px-color-white) !important;
-  color: black !important;
-  position: relative;
-}
+
+
 
 .px-taps .active::after {
   content: "";
@@ -458,12 +431,7 @@ input[type="file"].custom-upload-input {
   border-radius: 7px 7px 0px 0px;
 }
 
-.px-taps .nav .nav-item .active::after {
-  content: "";
-  height: 6px;
-  position: absolute;
-  text-align: start;
-}
+
 
 .px-taps .nav-link {
   color: black;
@@ -1093,34 +1061,11 @@ input[type="file"].custom-upload-input {
 }
 
 /* start main content */
-/* start sidebar */
-.sidebar {
-  font-size: 16px;
-  height: 95vh;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
-  position: sticky;
-  top: 2.5%;
-}
 
-.sidebar::-webkit-scrollbar {
-  display: none;
-  width: 5px;
-}
 
-.sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(215, 215, 215, 0.301);
-  border-radius: 10px;
-  margin-top: 50px;
-}
 
-.logo {
-  color: var(--px-main-color-blue);
-  padding-block: 20px;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 13px;
-}
+
+
 
 .side-label {
   color: var(--px-input-placeholder-color);
@@ -1136,26 +1081,10 @@ input[type="file"].custom-upload-input {
   font-size: 23px !important;
 }
 
-.active-side-link {
-  color: var(--px-main-color-blue) !important;
-  box-shadow: none !important;
-}
 
-.active-side-link .icon path,
-.active-side-link .icon circle {
-  stroke: var(--px-main-color-blue) !important;
-}
 
-.active-side-link::after {
-  content: "";
-  height: 100%;
-  width: 2%;
-  position: absolute;
-  background-color: var(--px-main-color-blue) !important;
-  top: 0;
-  left: -16px;
-  border-radius: 0px 5px 5px 0px;
-}
+
+
 
 .side-drop-down .accordion-button::after {
   transform: rotate(0deg);
@@ -1246,19 +1175,9 @@ input[type="file"].custom-upload-input {
   transition: width 0.3s ease-in-out;
 }
 
-/* end sidebar */
 /* start header */
 
-header {
-  padding-top: 25px;
-  background-color: var(--px-main-bg-color);
-}
 
-.collaps-btn {
-  font-size: 2rem;
-  color: var(--px-main-color-blue);
-  cursor: pointer;
-}
 
 .header-search {
   height: fit-content;
@@ -1357,10 +1276,6 @@ header {
   color: var(--px-gray-bg-color);
 }
 
-.collaps-active-side-links {
-  height: 100vh;
-  transition: all .3s ease-in-out;
-}
 
 .mobile-side-head {
   background-color: var(--px-light-blue);
@@ -1405,11 +1320,7 @@ header {
   display: none !important;
 }
 
-@media screen and (max-width:992px) {
-  .right-side-links {
-    width: 40%;
-  }
-}
+
 
 /* end header */
 /* start content */
@@ -1701,26 +1612,10 @@ footer a {
 
 
 /* start geo locations */
-.px-geo-location .nav-pills .nav-item .nav-link {
-  color: var(--px-gray-bg-color);
-  background-color: var(--px-main-bg-color);
-  position: relative;
-}
 
-.px-geo-location .nav-pills .nav-item .active {
-  color: var(--px-main-color-blue);
-  background-color: var(--px-main-bg-color);
-  position: relative;
-}
 
-.px-geo-location .nav-pills .nav-item .active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  left: 10%;
-  border-top: 1px solid var(--px-main-color-blue);
-}
+
+
 
 .right-icon {
   font-size: 12px;
@@ -1868,11 +1763,6 @@ footer a {
 
 /* end dashboard */
 /* start reservation */
-@media screen and (max-width:1400px) {
-  .vertical-separetor::after {
-    display: none;
-  }
-}
 
 /* end reservation */
 /*start folio reservation */
@@ -2174,67 +2064,12 @@ input:checked+.slider:before {
   border: none !important;
 }
 
-/* end filter */
-/* test react pro sidebar */
-.ps-sidebar-container-test-id .ps-menu-root {
-  background-color: #fff;
-  border-radius: 1rem;
-}
-
-.side-container .css-1wvake5 {
-  border-left-style: none !important;
-}
-
-.side-container .ps-sidebar-root {
-  background-color: #ffffff !important;
-  border-radius: 1.5rem !important;
-  margin: 1rem 0;
-  border: 1px solid #e4e6eb !important;
-  /* border-left: 1px solid #e4e6eb ; */
-  height: 95vh;
-  width: 100%;
-}
-
-/* Hide the scrollbar but still allow scrolling */
-.side-container .ps-sidebar-root .css-dip3t8 {
-  background-color: #ffffff !important;
-  border-radius: 1.5rem !important;
-  overflow-y: scroll !important;
-  /* Enable vertical scrolling */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.side-container .ps-sidebar-root .css-dip3t8::-webkit-scrollbar {
-  display: none;
-}
 
 
-.side-container {
-  overflow: hidden;
-  /* Hide overflow */
-}
 
-.side-container .ps-sidebar-root .ps-sidebar-container {
-  overflow-y: auto;
-  /* Allow vertical scrolling if needed */
-  max-height: 100vh;
-  /* Ensure it doesn't exceed the viewport height */
-  /* background-color: #17C653; */
-}
 
-.ps-sidebar-container-test-id .ps-menu-root {
-  overflow: hidden;
-  /* Hide overflow for submenu */
-}
 
-.ps-sidebar-container-test-id .ps-menu-root .ps-open {
-  overflow: hidden !important;
-  /* Ensure no overflow when open */
-}
+
 
 /* search bar */
 @import "@react-aria/example-theme";

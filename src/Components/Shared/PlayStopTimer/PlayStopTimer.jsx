@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './PlayStopTimer.module.css';
 
 const PlayStopTimer = () => {
   const [isPlaying, setIsPlaying] = useState(false);

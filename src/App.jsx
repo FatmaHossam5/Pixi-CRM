@@ -23,29 +23,32 @@ import Login from "./Components/Controls/Auth/Login/Login";
 
 function App() {
   const { i18n } = useTranslation();
-  const isRtl = i18n.language === 'ar';
+  // const isRtl = i18n.language === 'ar';
 
-  useEffect(() => {
-    const ltrBootstrap = document.getElementById('ltr-bootstrap');
-    const rtlBootstrap = document.getElementById('rtl-bootstrap');
-    const ltrApp = document.getElementById('ltr-app');
-    const rtlApp = document.getElementById('rtl-app');
+  // useEffect(() => {
+  //   const ltrBootstrap = document.getElementById('ltr-bootstrap');
+  //   const rtlBootstrap = document.getElementById('rtl-bootstrap');
+  //   const ltrApp = document.getElementById('ltr-app');
+  //   const rtlApp = document.getElementById('rtl-app');
 
-    if (isRtl) {
-      ltrBootstrap.disabled = true;
-      rtlBootstrap.disabled = false;
-      ltrApp.disabled = true;
-      rtlApp.disabled = false;
+  //   if (isRtl) {
+  //     ltrBootstrap.disabled = true;
+  //     rtlBootstrap.disabled = false;
+  //     ltrApp.disabled = true;
+  //     rtlApp.disabled = false;
 
-    } else {
-      ltrBootstrap.disabled = false;
-      rtlBootstrap.disabled = true;
-      ltrApp.disabled = false;
-      rtlApp.disabled = true;
+  //   } else {
+  //     ltrBootstrap.disabled = false;
+  //     rtlBootstrap.disabled = true;
+  //     ltrApp.disabled = false;
+  //     rtlApp.disabled = true;
 
-    }
-  }, [isRtl]);
+  //   }
+  // }, [isRtl]);
 
+useEffect(() => {
+  document.body.dir = i18n.dir();
+}, [i18n.language]);
 
 
   const routes = createBrowserRouter([

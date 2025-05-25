@@ -1,0 +1,33 @@
+/* start header */
+.pxCard {
+    background-color: var(--px-color-white) !important;
+    border-radius: 10px !important;
+    box-shadow: var(--px-sharp-shadow) !important;
+}
+
+.pxCard .dropdownToggle::after {
+    display: none;
+}
+
+.dropdownToggle::after {
+    display: none;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.verticalSeparator {
+    background-color: #D7D7D7;
+    opacity: 0.5;
+    height: 34px;
+}
+.greeting {
+  color: var(--px-main-color-blue);
+  margin: 0;
+}
+
+/* end header */

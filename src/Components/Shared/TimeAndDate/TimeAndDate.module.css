@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-inline-start: 1rem;
+}
+
+.dateText {
+  margin-bottom: 0;
+  margin-inline-end: 0.5rem;
+  color: #4B4F56;
+}
+
+.timeText {
+  margin-bottom: 0;
+  color: #4B4F56;
+}

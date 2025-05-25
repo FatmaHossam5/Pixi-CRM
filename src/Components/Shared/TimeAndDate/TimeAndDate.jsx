@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styles from './TimeAndDate.module.css';
 
 function TimeAndDate() {
     const [dateTime, setDateTime] = useState(new Date());
@@ -19,10 +20,10 @@ function TimeAndDate() {
     });
     return (
         <>
-            <div className="time-and-date ms-3 d-flex align-items-center">
-                <h5 className="me-2 mb-0"style={{color:"#4B4F56"}}>{formattedDate}</h5>
-                <h5 className="mb-0"style={{color:"#4B4F56"}}>{dateTime.toLocaleTimeString()} </h5>
-            </div>
+          <div className={styles.container}>
+      <h5 className={styles.dateText}>{formattedDate}</h5>
+      <h5 className={styles.timeText}>{dateTime.toLocaleTimeString()}</h5>
+    </div>
         </>
     )
 }

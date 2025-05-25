@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import { AuthContext } from "../../Helpers/Context/AuthContext";
 import { menuConfig } from "./menuConfig";
-import './SideBar.css';
-
+import styles from './Sidebar.module.css';
 const SideBar = ({ collapsed, toggleSidebar }) => {
   const { user } = useContext(AuthContext);
   const role = user?.roles?.[0] || "leader";
@@ -13,31 +12,32 @@ const SideBar = ({ collapsed, toggleSidebar }) => {
   const menu = menuConfig[role] || menuConfig["leader"];
 
   return (
-    <div className={`sidebar-container ${collapsed ? "collapsed" : "expanded"}`}>
+    <div className={`${styles.sidebarContainer} ${collapsed ? styles.collapsed : styles.expanded}`}>
       {/* Collapse button */}
-      <div className="side-collapse" onClick={toggleSidebar}>
+      <div className={styles.sideCollapse} onClick={toggleSidebar}>
         <i className={`fa-kit ${collapsed ? "fa-expand" : "fa-collapse"}`} />
       </div>
 
-      <aside className="sidebar ">
+      <aside className={styles.sidebar}>
         {/* Logo section */}
-        <div className="d-flex align-items-center p-2 mb-3 logo-section">
-          <div className="imgLogo bg-info ms-auto rounded-3">
+        <div className={`d-flex align-items-center p-2 mb-3 ${styles.logoSection}`}>
+          <div className={`bg-info ms-auto rounded-3  ${styles.imgLogo}`}>
             <img
               src={logo}
               alt="Application Logo"
               className="w-100 h-100 object-fit-contain"
             />
           </div>
-          <div className={`logo ${collapsed ? "d-none" : "ps-3 text-center"} me-auto`}>
-            <span>Pixi</span>
+
+          <div className={`${collapsed ? "d-none" : "ps-3 text-center"} me-auto`}>
+            <span className={styles.logo}>Pixi</span>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="side-links">
+        <nav className={styles.sideLinks}>
           {showSettings && (
-            <div className="nav-item" onClick={() => setShowSettings(false)}>
+            <div className={styles.navItem} onClick={() => setShowSettings(false)}>
               <i className="fa fa-chevron-left" />
               {!collapsed && <span>Back</span>}
             </div>
@@ -45,7 +45,7 @@ const SideBar = ({ collapsed, toggleSidebar }) => {
           {(showSettings ? menu?.settings : menu?.main)?.map((item) => {
             if (item.path === "settings-toggle") {
               return (
-                <div key="toggle-settings" className="nav-item" onClick={() => setShowSettings(true)}>
+                <div key="toggle-settings" className={styles.navItem} onClick={() => setShowSettings(true)}>
                   <i className={item.icon} />
                   {!collapsed && <span>{item.label}</span>}
                 </div>
@@ -56,8 +56,9 @@ const SideBar = ({ collapsed, toggleSidebar }) => {
               <NavLink
                 key={item?.path}
                 to={item?.path}
-                className={({ isActive }) => `nav-item ${isActive ? "active-side-link" : ""}`}
-              >
+                className={({ isActive }) =>
+                  `${styles.navItem} ${isActive ? styles.activeSideLink : ""}`
+                }              >
                 <i className={item?.icon} />
                 {!collapsed && <span>{item?.label}</span>}
               </NavLink>

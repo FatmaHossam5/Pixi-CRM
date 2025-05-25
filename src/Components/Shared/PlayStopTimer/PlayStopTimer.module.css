@@ -1,0 +1,16 @@
+.timerBtn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-inline: 12px; /* replaces padding-left/right */
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.stopIcon {
+  font-size: 20px;
+  width: 50px;
+  margin-inline-end: 8px; /* replaces margin-right */
+}
