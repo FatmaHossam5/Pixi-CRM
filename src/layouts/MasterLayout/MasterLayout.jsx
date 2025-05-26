@@ -1,9 +1,9 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "../Header/Header";
-import SideBar from "./../Sidebar/Sidebar";
+import Header from "../../Components/Template/Header/Header";
+import SideBar from "../../Components/Template/Sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { AuthContext } from "../../Helpers/Context/AuthContext";
+import { AuthContext } from "../../Components/Helpers/Context/AuthContext";
 import styles from './MasterLayout.module.css'
 
 

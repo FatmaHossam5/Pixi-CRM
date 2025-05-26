@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Modal } from "react-bootstrap";
 import { AuthContext } from "../../Helpers/Context/AuthContext";
-import Loader from "../Loader/Loader";
+import Loader from "../../feedback/Loader/Loader";
 import { useTranslation } from "react-i18next";
 
 const FromButton = ({ reset ,clearFileInput,buttonLabel,disabled }) => {

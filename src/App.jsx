@@ -14,7 +14,7 @@ import TasksSettings from "./Components/Controls/features/settings/TasksSettings
 import Team from "./Components/Controls/features/settings/Teams/Teams";
 import Users from "./Components/Controls/features/settings/Users/Users";
 import AuthLayout from "./Components/Template/AuthLayout/AuthLayout";
-import MasterLayout from "./Components/Template/MasterLayout/MasterLayout";
+import MasterLayout from "./layouts/MasterLayout/MasterLayout";
 import Dashboard from "./Components/Controls/features/crm/Dashboard/Dashboard";
 import "react-toastify/dist/ReactToastify.css";
 import AllBusiness from "./Components/Controls/landlord/AllBusiness/AllBusiness";

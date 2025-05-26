@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import DropdownPortal from '../../Shared/DropdownPortal/DropdownPortal'
+import DropdownPortal from '../DropdownPortal/DropdownPortal'
 
 export default function Dropdown({ dropdownContent, id, openDropdownId, setOpenDropdownId, onDelete }) {
 

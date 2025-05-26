@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CustomBreadcrumbs from '../customBreadcrumbs/customBreadcrumbs';
+import CustomBreadcrumbs from '../CustomBreadcrumbs/customBreadcrumbs';
 import DynamicSectionForTabs from '../DynamicSectionForTabs/DynamicSectionForTabs';
 import {
     columns as businessColumns,
