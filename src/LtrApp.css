@@ -1275,7 +1275,11 @@ input[type="file"].custom-upload-input {
 
 
 
-
+.px-card{
+    background-color: var(--px-color-white);
+  border-radius: 10px;
+  box-shadow: var(--px-sharp-shadow);
+}
 
 
 .side-label {

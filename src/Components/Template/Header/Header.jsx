@@ -24,7 +24,7 @@ const Header = ({ userName, userPhoto }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-              <h3 className={styles.greeting}>Hi, {userName}</h3>
+                <h3 className={styles.greeting}>Hi, {userName}</h3>
 
               </button>
 
