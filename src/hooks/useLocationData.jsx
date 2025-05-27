@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { AuthContext } from '../Context/AuthContext';
+import { AuthContext } from '../context/admin/AuthContext';
 
 export default function useLocationData() {
     const [countries, setCountries] = useState([]);

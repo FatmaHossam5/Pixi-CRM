@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
-import useRole from '../../../../Helpers/Hook/useRole';
+import useRole from '../../../../hooks/useRole';
 
 export default function CreateUsers() {
     const [imagePreview, setImagePreview] = useState(null);

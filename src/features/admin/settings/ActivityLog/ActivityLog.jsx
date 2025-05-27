@@ -1,6 +1,6 @@
 import React from 'react'
-import DynamicSectionForTabs from '../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs'
 import CreateActivityLog from './createActivityLog'
+import DynamicSectionForTabs from '../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs';
 
 export default function ActivityLog() {
   const [data, setData] = React.useState([]);

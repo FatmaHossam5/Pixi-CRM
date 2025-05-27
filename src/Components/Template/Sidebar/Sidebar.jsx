@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
-import { AuthContext } from "../../Helpers/Context/AuthContext";
 import { menuConfig } from "./menuConfig";
 import styles from './Sidebar.module.css';
+import { AuthContext } from "../../../context/admin/AuthContext";
 const SideBar = ({ collapsed, toggleSidebar }) => {
   const { user } = useContext(AuthContext);
   const role = user?.roles?.[0] || "leader";

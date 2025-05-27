@@ -2,11 +2,11 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import { AuthContext } from "../../../../Helpers/Context/AuthContext";
-import { ModalContext } from "../../../../Helpers/Context/ModalContext";
-import DeleteModal from "../../../../Shared/DeleteModal/DeleteModal";
-import DynamicSectionForTabs from "../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs";
 import CreateContacts from "./CreateContacts";
+import { AuthContext } from "../../../../context/admin/AuthContext";
+import DynamicSectionForTabs from "../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs";
+import DeleteModal from "../../../../components/Shared/feedback/DeleteModal/DeleteModal";
+import { ModalContext } from "../../../../context/shared/ModalContext";
 
 const Contacts = () => {
   const { t } = useTranslation();

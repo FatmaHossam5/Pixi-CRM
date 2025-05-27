@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { AuthContext } from '../../../../Helpers/Context/AuthContext';
 import { use } from 'react';
 import Select from 'react-select';
-import useLocationData from '../../../../Helpers/Hook/useLocationData';
-import useSource from '../../../../Helpers/Hook/useSource';
+import { AuthContext } from '../../../../context/admin/AuthContext';
+import useLocationData from '../../../../hooks/useLocationData';
+import useSource from '../../../../hooks/useSource';
 
 export default function CreateTeam({ onSubmit }) {
   const { base_url } = useContext(AuthContext);

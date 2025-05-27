@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import DynamicSectionForTabs from '../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs'
 import CreateTasksSettings from './CreateTasksSettings';
+import DynamicSectionForTabs from '../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs';
 
 export default function TasksSettings() {
   const [data, setData] = useState([]);

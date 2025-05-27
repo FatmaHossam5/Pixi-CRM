@@ -5,8 +5,9 @@ import {
     columns as businessColumns,
     data as businessData,
     fetchData as fetchBusinessData,
-  } from '../../Controls/landlord/AllBusiness/BusinessTableConfig'
-import BusinessForm from '../../Controls/landlord/AllBusiness/BusinessForm';
+  } from '../../../../features/landlord/AllBusiness/BusinessTableConfig';
+import BusinessForm from '../../../../features/landlord/AllBusiness/BusinessForm';
+
 export default function AdminTabsContainer({}) {
   const [activeTab, setActiveTab] = useState('businesses');
 

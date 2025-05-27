@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import DataTable from "react-data-table-component";
-import SearchInput from "../SearchInput/SearchInput";
+import SearchInput from "../../formControls/SearchInput/SearchInput";
 
 const GeneralTable = ({ filteredRows, columns,extraHeaderControls,  customContent, viewMode }) => {
  

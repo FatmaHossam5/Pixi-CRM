@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
-import { AuthContext } from '../Context/AuthContext'
 import { use } from 'react';
 import axios from 'axios';
+import { AuthContext } from '../context/admin/AuthContext';
 
 export default function usePipeline() {
     const[pipeline,setPipeline]=React.useState([])

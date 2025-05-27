@@ -3,8 +3,8 @@ import './Login.css'
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { AuthContext } from '../../../Helpers/Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../context/admin/AuthContext';
 
 const schema = yup.object().shape({
   identifier: yup.string().email('Invalid email').required('Email is required'),

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ModalContext } from '../../Helpers/Context/ModalContext';
-import AddFormOffcanvas from '../AddFormOffcanvas/AddFormOffcanvas';
-import GeneralTable from '../GeneralTable/GeneralTable';
+import { ModalContext } from '../../../../context/shared/ModalContext';
+import AddFormOffcanvas from '../../feedback/AddFormOffcanvas/AddFormOffcanvas';
+import GeneralTable from '../../tables/GeneralTable/GeneralTable';
 
 export default function DynamicSectionForTabs({
     data,

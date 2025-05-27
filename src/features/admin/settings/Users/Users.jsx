@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Form, Modal } from "react-bootstrap";
-import DynamicSectionForTabs from "../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs";
 import CreateUsers from "./CreateUsers";
-import { AuthContext } from "../../../../Helpers/Context/AuthContext";
-import { ModalContext } from "../../../../Helpers/Context/ModalContext";
+import DynamicSectionForTabs from "../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs";
+import DeleteModal from "../../../../components/Shared/feedback/DeleteModal/DeleteModal";
+import { AuthContext } from "../../../../context/admin/AuthContext";
+import { ModalContext } from "../../../../context/shared/ModalContext";
 
 const Users = () => {
   const [data, setData] = useState([]);

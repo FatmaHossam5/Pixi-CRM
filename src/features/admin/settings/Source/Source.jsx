@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CreateSource from "./CreateSource";
 import axios from "axios";
-import DynamicSectionForTabs from "../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs";
+import DynamicSectionForTabs from "../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs";
 
 
 const Source = () => {

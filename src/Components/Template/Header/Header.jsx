@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import userImage from '../../../assets/images/user2-160x160.jpg';
-import TimeAndDate from "../../Shared/TimeAndDate/TimeAndDate";
-import PlayStopTimer from "../../Shared/PlayStopTimer/PlayStopTimer";
 import styles from './Header.module.css';
+import TimeAndDate from "../../Shared/ui/time/TimeAndDate/TimeAndDate";
+import PlayStopTimer from "../../Shared/feedback/PlayStopTimer/PlayStopTimer";
 
 const Header = ({ userName, userPhoto }) => {
 

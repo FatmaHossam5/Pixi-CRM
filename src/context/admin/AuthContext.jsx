@@ -1,15 +1,20 @@
-import React, { createContext, useState } from 'react';
-import api from '../../Utils/api';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { createContext, useState } from 'react';
 export const AuthContext = createContext();
-export const AuthProvider = ({ children }) => { 
-      const [user, setUser] = useState(() => {
-        const storedUser = localStorage.getItem("user");
-        return storedUser ? JSON.parse(storedUser) : null;
-      });
-      ;
-      
- const login = async (identifier, password) => {
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
+
+  const api = axios.create({
+    baseURL: 'https://tenant1.billiqa.com/api',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const login = async (identifier, password) => {
     try {
       const response = await api.post('/login', { identifier, password });
 
@@ -27,16 +32,16 @@ export const AuthProvider = ({ children }) => {
       return false;
     }
   };
-  
+
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('token');
     localStorage.removeItem("user");
 
-            
+
   };
-   return (
+  return (
     <AuthContext.Provider value={{ user, login, logout }}>
       {children}
     </AuthContext.Provider>

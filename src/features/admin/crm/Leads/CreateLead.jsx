@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { ToastContext } from "../../../../Helpers/Context/ToastContext ";
-import useContact from "../../../../Helpers/Hook/useContact";
-import useSource from "../../../../Helpers/Hook/useSource";
-import FromButton from "../../../../Shared/FromButton/FromButton";
-import SectionTitle from "../../../../Template/SectionTitle/SectionTitle";
+import useSource from "../../../../hooks/useSource";
+import useContact from "../../../../hooks/useContact";
+import FromButton from "../../../../components/Shared/ui/FromButton/FromButton";
+import { ToastContext } from "../../../../context/shared/ToastContext ";
+import SectionTitle from "../../../../components/Template/SectionTitle/SectionTitle";
 const CreateLead = ({ initialData = {} }) => {
 
   const { showToast } = useContext(ToastContext);

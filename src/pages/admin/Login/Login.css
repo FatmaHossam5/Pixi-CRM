@@ -1,5 +1,5 @@
 .login-wrapper {
-  background: url('../../../../assets/images/background.png') ;
+  background: url('../../../assets/images/background.png') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;

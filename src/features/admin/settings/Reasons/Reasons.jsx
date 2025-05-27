@@ -1,6 +1,6 @@
 import React from 'react'
-import DynamicSectionForTabs from '../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs'
 import CreateReasons from './createReasons';
+import DynamicSectionForTabs from '../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs';
 
 export default function Reasons() {
   const [data, setData] = React.useState([]);

@@ -2,23 +2,23 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import Contacts from "./Components/Controls/features/crm/Contacts/Contacts";
-import Lead from "./Components/Controls/features/crm/Leads/Lead";
-import Tasks from "./Components/Controls/features/crm/Tasks/Tasks";
-import ActivityLog from "./Components/Controls/features/settings/ActivityLog/ActivityLog";
-import CustomField from "./Components/Controls/features/settings/CustomeField/CustomField";
-import Pipeline from "./Components/Controls/features/settings/PipeLine/Pipeline";
-import Reasons from "./Components/Controls/features/settings/Reasons/Reasons";
-import Source from "./Components/Controls/features/settings/Source/Source";
-import TasksSettings from "./Components/Controls/features/settings/TasksSettings/TasksSettings";
-import Team from "./Components/Controls/features/settings/Teams/Teams";
-import Users from "./Components/Controls/features/settings/Users/Users";
 import AuthLayout from "./Components/Template/AuthLayout/AuthLayout";
 import MasterLayout from "./layouts/MasterLayout/MasterLayout";
-import Dashboard from "./Components/Controls/features/crm/Dashboard/Dashboard";
 import "react-toastify/dist/ReactToastify.css";
-import AllBusiness from "./Components/Controls/landlord/AllBusiness/AllBusiness";
-import Login from "./Components/Controls/Auth/Login/Login";
+import Contacts from "./features/admin/crm/Contacts/Contacts";
+import Lead from "./features/admin/crm/Leads/Lead";
+import Tasks from "./features/admin/crm/Tasks/Tasks";
+import ActivityLog from "./features/admin/settings/ActivityLog/ActivityLog";
+import CustomField from "./features/admin/settings/CustomeField/CustomField";
+import Pipeline from "./features/admin/settings/PipeLine/Pipeline";
+import Reasons from "./features/admin/settings/Reasons/Reasons";
+import Source from "./features/admin/settings/Source/Source";
+import TasksSettings from "./features/admin/settings/TasksSettings/TasksSettings";
+import Team from "./features/admin/settings/Teams/Teams";
+import Users from "./features/admin/settings/Users/Users";
+import Dashboard from "./features/admin/crm/Dashboard/Dashboard";
+import AllBusiness from "./features/landlord/AllBusiness/AllBusiness";
+import Login from "./pages/admin/Login/Login";
 
 
 function App() {

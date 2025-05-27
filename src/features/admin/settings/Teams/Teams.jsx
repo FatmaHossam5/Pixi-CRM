@@ -345,14 +345,14 @@
 // export default Team;
 
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../../../Helpers/Context/AuthContext";
-import { ModalContext } from "../../../../Helpers/Context/ModalContext";
-import usePipeline from "../../../../Helpers/Hook/usePipeline";
-import AddFormOffcanvas from "../../../../Shared/AddFormOffcanvas/AddFormOffcanvas";
-import DynamicSectionForTabs from "../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs";
-import TooltipIcon from "../../../../Shared/Tooltip/TooltipIcon";
 import CreateTeam from "./CreateTeam";
 import axios from "axios";
+import { AuthContext } from "../../../../context/admin/AuthContext";
+import { ModalContext } from "../../../../context/shared/ModalContext";
+import usePipeline from "../../../../hooks/usePipeline";
+import AddFormOffcanvas from "../../../../components/Shared/feedback/AddFormOffcanvas/AddFormOffcanvas";
+import DynamicSectionForTabs from "../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs";
+import TooltipIcon from "../../../../components/Shared/ui/Tooltip/TooltipIcon";
 
 const Team = () => {
   const [teamData, setTeamData] = useState([]);

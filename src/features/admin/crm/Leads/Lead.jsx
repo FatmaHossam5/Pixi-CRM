@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../../../Helpers/Context/AuthContext";
-import DynamicSectionForTabs from "../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs";
 import CreateLead from "./CreateLead";
-import usePipeline from "../../../../Helpers/Hook/usePipeline";
-import TooltipIcon from "../../../../Shared/Tooltip/TooltipIcon";
-import AddFormOffcanvas from "../../../../Shared/AddFormOffcanvas/AddFormOffcanvas";
-import { ModalContext } from "../../../../Helpers/Context/ModalContext";
 import CreateTask from "./CreateTask";
+import { AuthContext } from "../../../../context/admin/AuthContext";
+import DynamicSectionForTabs from "../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs";
+import usePipeline from "../../../../hooks/usePipeline";
+import TooltipIcon from "../../../../components/Shared/ui/Tooltip/TooltipIcon";
+import AddFormOffcanvas from "../../../../components/Shared/feedback/AddFormOffcanvas/AddFormOffcanvas";
+import { ModalContext } from "../../../../context/shared/ModalContext";
 
 const Lead = () => {
   const [leadData, setLeadData] = useState([]);

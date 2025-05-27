@@ -1,8 +1,8 @@
 import React from 'react'
-import { AuthProvider } from './Components/Helpers/Context/AuthContext'
-import { ThemeProvider } from './Components/Helpers/Context/ThemeContext'
-import ModalContextProvider from './Components/Helpers/Context/ModalContext'
-import ToastContextProvider from './Components/Helpers/Context/ToastContext '
+import { AuthProvider } from './context/admin/AuthContext'
+import { ThemeProvider } from './context/shared/ThemeContext'
+import ModalContextProvider from './context/shared/ModalContext'
+import ToastContextProvider from './context/shared/ToastContext '
 
 export default function AppProviders({children}) {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import DynamicSectionForTabs from '../../../../Shared/DynamicSectionForTabs/DynamicSectionForTabs';
 import CreateCustomField from './createCustomField';
+import DynamicSectionForTabs from '../../../../components/Shared/navigation/DynamicSectionForTabs/DynamicSectionForTabs';
 
 export default function CustomField() {
   const [data, setData] = React.useState([]);

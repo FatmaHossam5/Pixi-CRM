@@ -1,7 +1,5 @@
 
 import { useContext, useState } from "react";
-import { ModalContext } from "../../Helpers/Context/ModalContext";
-import AddFormOffcanvas from "../AddFormOffcanvas/AddFormOffcanvas";
 import ExportForms from "../ExportForms/ExportForms";
 import ManageColumnsForm from "../ManageColumnsForm/ManageColumnsForm";
 import FilterationIcon from './FilterationIcon';
@@ -9,6 +7,8 @@ import FilterationIcon from './FilterationIcon';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import * as XLSX from "xlsx";
+import AddFormOffcanvas from "../../feedback/AddFormOffcanvas/AddFormOffcanvas";
+import { ModalContext } from "../../../../context/shared/ModalContext";
 
 const SearchInput = ({
   search,
