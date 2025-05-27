@@ -1,3 +1,7 @@
-const PROJECT_MODE = 'landlord'; // or 'admin'
-
-export default PROJECT_MODE;
+let projectMode = 'admin';
+export const setProjectMode = (mode) => {
+  projectMode = mode;
+};
+export const getProjectMode = () => {
+  return projectMode;
+};
